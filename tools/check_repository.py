@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Check local links, skill portability, syntax, and public source boundaries."""
 import ast
+import hashlib
 import json
 from pathlib import Path
 import re
@@ -11,6 +12,10 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 SKILL = ROOT / "skills/port-any-game-anywhere"
 FORBIDDEN_SUFFIXES = {".iso", ".cue", ".rom", ".bin", ".bios", ".mp3", ".mp4", ".wav"}
+DOCUMENT_IMAGES = {
+    # Reviewed original Switchboard capture. See docs/assets/README.md.
+    "docs/assets/switchboard-preview.png": "7eebff742ce63082008fed247aab513b5ca3e6b23d2ba6f49fe7552614f56f62",
+}
 
 def source_files():
     result = subprocess.run(["git", "ls-files", "--cached", "--others", "--exclude-standard", "-z"],
@@ -37,6 +42,11 @@ def check(files):
             errors.append(f"forbidden public input: {relative}")
         if path.stat().st_size > 2_000_000:
             errors.append(f"large source file requires review: {relative}")
+            continue
+        if relative.as_posix() in DOCUMENT_IMAGES:
+            data = path.read_bytes()
+            if not data.startswith(b"\x89PNG\r\n\x1a\n") or hashlib.sha256(data).hexdigest() != DOCUMENT_IMAGES[relative.as_posix()]:
+                errors.append(f"documentation image changed; review provenance and fingerprint: {relative}")
             continue
         try:
             text = path.read_text(encoding="utf-8")

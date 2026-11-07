@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="620" viewBox="0 0 520 620" role="img" aria-labelledby="title desc">
+  <title id="title">Five stages of a verified port</title>
+  <desc id="desc">Read from top to bottom: assess and pin the reference; inventory game paths; implement one milestone; check and verify; accept on the target. Failed checks return to diagnosis and a bounded fix.</desc>
+  <!-- SPDX-License-Identifier: MIT -->
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto"><path d="m1 1 5 3-5 3" fill="none" stroke="#72d9b0" stroke-width="1.5"/></marker></defs>
+  <rect x="1" y="1" width="518" height="618" rx="18" fill="#0e1826" stroke="#2a4055"/>
+  <g fill="none" stroke="#72d9b0" stroke-width="2" marker-end="url(#arrow)">
+    <path d="M260 116v33"/><path d="M260 226v33"/><path d="M260 336v33"/><path d="M260 446v33"/>
+  </g>
+  <g font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif">
+    <g fill="#172b3b" stroke="#436279"><rect x="30" y="44" width="460" height="72" rx="10"/><rect x="30" y="154" width="460" height="72" rx="10"/><rect x="30" y="264" width="460" height="72" rx="10"/><rect x="30" y="374" width="460" height="72" rx="10"/><rect x="30" y="484" width="460" height="72" rx="10"/></g>
+    <g fill="#83eac0" font-size="18" font-weight="600"><text x="54" y="88">01</text><text x="54" y="198">02</text><text x="54" y="308">03</text><text x="54" y="418">04</text><text x="54" y="528">05</text></g>
+    <g fill="#f0f6fb" font-size="24" font-weight="600"><text x="287" y="88" text-anchor="middle">Assess &amp; pin reference</text><text x="287" y="198" text-anchor="middle">Inventory game paths</text><text x="287" y="308" text-anchor="middle">Port one milestone</text><text x="287" y="418" text-anchor="middle">Check &amp; verify</text><text x="287" y="528" text-anchor="middle">Accept on the target</text></g>
+  </g>
+</svg>

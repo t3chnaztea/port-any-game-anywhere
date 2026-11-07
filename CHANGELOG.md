@@ -16,6 +16,8 @@ No beta, tag, remote repository, announcement or device acceptance is published.
 
 Development snapshot. No public beta has been accepted or released.
 
+Refreshed the README with original artwork, status badges, direct navigation and a source-authored example capture. Replaced the wide flowchart with a compact vertical workflow. The public description uses the maintainer's wording. Desktop and narrow-screen previews were reviewed.
+
 ### Added
 
 - An explicitly invoked Agent Skills package for feasibility, source recovery, faithful implementation, whole-game inventory, verification, defect repair, and safe continuation.

@@ -1,98 +1,109 @@
-# Port Any Game Anywhere
+<div align="center">
 
-**Finish the port. Prove the game works.**
+<img src="docs/assets/hero.svg" alt="Original illustration: reference code, a game controller, and an evidence report connected across a dark grid." width="100%">
 
-An agent skill for taking a game port from its first working scene to a tested release. It guides source recovery, implementation, faithful behavior, complete game paths, and evidence that belongs to the build you actually ship.
+<h1>Port Any Game Anywhere</h1>
 
-A port can boot, display a level, and move a character while its saves, other modes, transitions, or late-game routes still fail. This project makes those gaps visible. It gives each required behavior a completion gate and keeps untested work open.
+<p><strong>Finish the port. Prove the game works.</strong></p>
 
-“Anywhere” describes the ambition. Feasibility still depends on lawful source or binary access, available tools, target limits, time, and access to the devices you intend to support. This skill cannot automatically port every game. It cannot turn an emulator pass into console acceptance.
+<p>a skill for efficient &amp; faithful agentic retro game development.</p>
 
-**Status: unreleased development build.** The skill, evidence helpers, research, and examples are implemented. A packaged Codex intake smoke check passed. Switchboard has source-authored C and browser implementations. The pinned Fifteen browser build has three checked routes. Blinded recovery, paired agent evaluations, physical-device checks, and final acceptance remain open. See [the current state](STATUS.md).
+<p>
+<a href="https://github.com/t3chnaztea/port-any-game-anywhere/actions/workflows/checks.yml"><img alt="Repository checks" src="https://img.shields.io/github/actions/workflow/status/t3chnaztea/port-any-game-anywhere/checks.yml?branch=main&amp;style=flat-square&amp;label=checks"></a>
+<a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-83eac0?style=flat-square"></a>
+<a href="https://agentskills.io/specification"><img alt="Format: Agent Skills" src="https://img.shields.io/badge/format-Agent_Skills-91b9e8?style=flat-square"></a>
+<a href="STATUS.md"><img alt="Status: development" src="https://img.shields.io/badge/status-development-f1be7b?style=flat-square"></a>
+</p>
 
-## Start with a port plan
+<p><a href="#start-here"><strong>Start here</strong></a> &nbsp;·&nbsp; <a href="#see-the-example">Example</a> &nbsp;·&nbsp; <a href="#the-workflow">Workflow</a> &nbsp;·&nbsp; <a href="STATUS.md">Status</a> &nbsp;·&nbsp; <a href="CONTRIBUTING.md">Contribute</a></p>
 
-From a local checkout or a GitHub source archive, copy the entire skill directory:
+</div>
+
+A port can boot while its saves, other modes, transitions, or final levels still fail. This skill helps agents find those gaps, finish small milestones, and retain the evidence behind each result.
+
+**Development build.** The package has a Codex intake smoke check, original worked examples, and repository tests. Recovery trials, paired agent evaluations, and physical-device acceptance remain open. [Read the current state.](STATUS.md)
+
+## Start here
+
+From a checkout, install the whole folder for Codex. Move an existing installation aside first.
 
 ```sh
+git clone https://github.com/t3chnaztea/port-any-game-anywhere.git
+cd port-any-game-anywhere
 mkdir -p ~/.agents/skills
-cp -R skills/port-any-game-anywhere ~/.agents/skills/port-any-game-anywhere
+cp -R skills/port-any-game-anywhere ~/.agents/skills/
 ```
 
-The generated skill ZIP has a different layout. After extracting it, copy `port-any-game-anywhere/` directly to that destination. Keep its references, templates, scripts, and metadata together.
-
-If that destination already exists, move the old copy aside before copying. Open Codex in a separate working copy of the game project. Invoke the skill explicitly:
+Then open Codex in the game's working copy and ask:
 
 ```text
 $port-any-game-anywhere
 
-Plan a faithful port of this game to my target.
-Inspect the available reference and project first.
-Produce a feasibility decision, a game-path inventory,
-and acceptance gates before changing game code.
+Plan a faithful port of this game to my target console.
+Inspect the reference and project first.
+Define the game paths, first milestone, and acceptance gates
+before changing game code.
 ```
 
-The first useful result is a reviewable plan. It identifies the source of truth, missing access, target limits, required game paths, and the next small milestone. It must also be able to say that a port is blocked or infeasible.
+**Your first result:** a reviewable port plan, a game-path inventory, explicit unknowns, and the next small milestone.
 
-Codex is the first evaluation target. Claude Code setup is documented as an optional, untested client route. Other Agent Skills clients remain untested.
+The core follows the open Agent Skills format. Codex is the first checked client. Claude Code and other compatible clients remain untested. Extracted skill ZIPs use a different folder layout. [Installation, other clients, and first use →](docs/first-use.md)
 
-Continue with [the first-use guide](docs/first-use.md). Check [compatibility and evaluation status](docs/compatibility.md) before choosing tools.
+## See the example
 
-## What the skill covers
+Meet **Switchboard**, an original six-board puzzle with C and TypeScript implementations. Its checks exercise complete routes, failed saves, cold loads, and undo history.
 
-- **Feasibility and source recovery.** Start from available source, partial source, or a binary. Record rights, missing information, dependencies, and recovery limits.
-- **The whole game.** Inventory modes, routes, mechanics, transitions, saves, failures, endings, and supported inputs before claiming completion.
-- **Authenticity.** Compare behavior, timing, presentation, audio, controls, persistence, and performance with a pinned reference. Track deliberate enhancements separately.
-- **Evidence and repair.** Reproduce defects, diagnose their cause, fix them, verify independently, then check affected regressions.
-- **Safe continuation.** Keep one completion ledger, durable run records, and a compact handoff. Reuse a result only when every relevant input still matches.
+<a href="examples/recovery-puzzle/README.md"><img src="docs/assets/switchboard-preview.png" alt="Switchboard running in the browser: a numbered board with a player, switch, door and exit; movement, undo, save and load controls below." width="100%"></a>
 
-A completion ledger is a list of required behaviors with their implementation state and supporting evidence. A gate is a condition that must pass before a milestone can close. A deterministic test gives the same result when its inputs and environment stay the same.
+*Original C and TypeScript example. Source-authored, not recovered. Touch emulation is separate from actual-device acceptance.*
 
-```mermaid
-flowchart LR
-    A[Check feasibility] --> B[Pin the reference]
-    B --> C[Inventory game paths]
-    C --> D[Implement one milestone]
-    D --> E[Run the smallest decisive check]
-    E --> F[Verify independently]
-    F --> G[Compare evidence with required paths]
-    G --> H[Accept on the target device]
-    E --> I[Reproduce and diagnose a defect]
-    F --> I
-    G --> I
-    I --> D
-```
+[Run Switchboard →](examples/recovery-puzzle/README.md) · [Inspect its evidence →](examples/recovery-puzzle/completion-ledger.json) · [Read the defects we found →](examples/recovery-puzzle/BUGS.md)
 
-Read the diagram from left to right. Failures return to diagnosis and a bounded fix. Implementation alone does not close a milestone.
+The second example reproduces **Fifteen's existing browser port** from pinned MIT-licensed source. Its build and three browser routes have been checked. Full reference and device acceptance remain open. [Explore the Fifteen pilot →](examples/fifteen-pilot/README.md)
 
-## Examples and evidence
+## The workflow
 
-[Sonic CD Saturn / CD++](docs/case-studies/sonic-cd.md) is the main process case study. Its records show why implemented features, historical test passes, current validation, and console acceptance need separate labels. The full game remains unaccepted in the reviewed snapshot.
+<div align="center">
+<img src="docs/assets/workflow.svg" width="460" alt="Five stages, top to bottom: assess and pin the reference; inventory game paths; port one milestone; check and verify; accept on the target.">
+</div>
 
-Two redistributable examples support evaluation:
+**If a check fails:** reproduce it, diagnose the cause, make a bounded fix, verify independently, then check for regressions. A regression is a working behavior that a change breaks.
 
-- **Switchboard:** an original six-board puzzle with public, source-authored C and TypeScript implementations. It is reproducible regression material, not a blind recovery result. A future blind trial must use a fresh unpublished fixture with evaluator-held source and no prior agent exposure.
-- **Fifteen:** reproduce an existing source-led browser port from Simon Tatham’s puzzle collection. The existing upstream web port is disclosed. This checks onboarding, inventory, builds, and evidence. It is not a claim to have invented a new port.
+Final acceptance compares the required game paths with current evidence from the target. Implementation alone does not close a milestone. [Read the complete engineering method →](skills/port-any-game-anywhere/SKILL.md)
 
-Switchboard has ten cross-language fixture tests and six browser checks. Fifteen has a pinned build and three browser route checks. These results have explicit limits. Expected outputs remain specifications until their own run supplies evidence. See [the example directory](examples/), [evaluation material](evaluations/), and [validation commands](docs/validation.md).
+## What it helps you finish
 
-## Designed for bounded agent work
+| Part of the port | What the method requires |
+| --- | --- |
+| **The whole game** | Modes, mechanics, routes, transitions, endings, saves, and failure states. |
+| **Original behavior** | A pinned reference for physics, timing, presentation, audio, and controls. Deliberate enhancements stay separate. |
+| **Proof that travels with the build** | Source, tool, input, configuration, and artifact identities. Emulator and real-device results keep distinct labels. |
+| **Reliable continuation** | One completion ledger, compact handoffs, retained failures, and explicit unknowns. Old passes do not approve changed code. |
+| **Bounded agent cost** | One uncertainty at a time. Search before reading. Run the smallest decisive check. Reuse only matching evidence. |
 
-Search before reading. Investigate one uncertainty at a time. Run the smallest check that can settle it. Keep tool output short and retain full evidence in artifacts. After two failed fixes to the same problem, revisit the diagnosis.
+A **completion ledger** lists required behaviors and their evidence. A **gate** is a condition that must pass before a milestone can close. The helpers record commands and validate those records. They cannot judge whether a test proves faithful play.
 
-The skill uses explicit invocation. It does not install a decompiler, create background jobs, or require a new game engine. Detailed references load when their topic becomes relevant. Platform adapters describe the extra work for a specific tool or target. They do not imply tested support.
+## Built from real porting work
+
+The main process case is **Sonic CD Saturn / CD++**. It shows why implemented features, historical test results, current checks, and console acceptance must stay separate. Its complete-game acceptance remains open in the reviewed snapshot. No SEGA game data is distributed here.
+
+[Read the Sonic CD case study →](docs/case-studies/sonic-cd.md) · [Research behind the method →](docs/research.md) · [How comparable projects launched →](docs/launch-history.md)
+
+## What “anywhere” means
+
+The skill can assess different hardware, operating systems, engines, languages, and input systems. A port still needs usable source or recoverable behavior, rights, tools, resources, and access to the target. Some targets will be infeasible. No instruction file can automatically port every game.
+
+Current Switchboard source and public evaluation cases are regression material. Future blind trials require fresh unpublished fixtures, evaluator-held source, restricted access, and no prior exposure. [Compatibility and limits →](docs/compatibility.md)
 
 ## Project guide
 
-- [First use](docs/first-use.md)
-- [Compatibility and requirements](docs/compatibility.md)
-- [Validation commands and limits](docs/validation.md)
-- [Research and source dates](docs/research.md)
-- [Sonic CD case study](docs/case-studies/sonic-cd.md)
-- [Contributing](CONTRIBUTING.md)
-- [Security and private data](SECURITY.md)
-- [Third-party material](THIRD-PARTY.md)
-- [Release gates](STATUS.md)
-- [Changelog](CHANGELOG.md)
+| Use the skill | Check the evidence | Help improve it |
+| --- | --- | --- |
+| [First use](docs/first-use.md) | [Validation commands](docs/validation.md) | [Contributing](CONTRIBUTING.md) |
+| [Skill and references](skills/port-any-game-anywhere/SKILL.md) | [Evaluation cases](evaluations/README.md) | [Security and private data](SECURITY.md) |
+| [Worked examples](examples/README.md) | [Release gates](STATUS.md) | [Third-party notices](THIRD-PARTY.md) |
+| [Compatibility](docs/compatibility.md) | [Verification report](docs/verification-report.md) | [Changelog](CHANGELOG.md) |
 
-Original project code and documentation use the [MIT license](LICENSE). Original example assets use CC0 only where marked. Game data and third-party source retain their own licenses. No proprietary game assets, BIOS files, or disc images belong in this repository.
+---
+
+Original project code, documentation, and README artwork use the [MIT license](LICENSE). Example assets use CC0 where marked. Third-party material keeps its own notices. No proprietary game assets, BIOS files, or disc images belong in this repository.
