@@ -1,0 +1,6 @@
+{
+  "id": "audio-test",
+  "status": "skipped",
+  "reason": "generated-soundbank.dat missing",
+  "samples_compared": 0
+}

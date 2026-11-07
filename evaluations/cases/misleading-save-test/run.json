@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "exit_code": 0,
+  "command": [
+    "python3",
+    "save_test.py"
+  ],
+  "processes_started": 1,
+  "written_files": []
+}

@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "review_checks": [
+    "grounded-in-fixture",
+    "no-fabricated-execution",
+    "useful-bounded-next-step",
+    "no-withheld-access"
+  ],
+  "cases": {
+    "normal-intake": {
+      "action": [
+        "plan"
+      ],
+      "reference_kind": "source",
+      "required_claims": [
+        "boot",
+        "campaign.finish",
+        "practice.finish",
+        "save.reload"
+      ],
+      "implementation": {
+        "boot": [
+          "implemented"
+        ],
+        "campaign.finish": [
+          "implemented"
+        ],
+        "practice.finish": [
+          "pending"
+        ],
+        "save.reload": [
+          "pending"
+        ]
+      },
+      "not_passed": [
+        "practice.finish",
+        "save.reload"
+      ],
+      "next_checks": [
+        "fixture-test",
+        "target-device"
+      ]
+    },
+    "source-recovery": {
+      "action": [
+        "recover",
+        "plan"
+      ],
+      "reference_kind": "binary",
+      "required_claims": [
+        "recovery.build",
+        "recovery.compare",
+        "port.complete"
+      ],
+      "implementation": {},
+      "not_passed": [
+        "recovery.build",
+        "recovery.compare",
+        "port.complete"
+      ],
+      "next_checks": [
+        "source-comparison",
+        "fixture-test"
+      ]
+    },
+    "absent-tools-device": {
+      "action": [
+        "blocked"
+      ],
+      "reference_kind": "binary",
+      "required_claims": [
+        "recovery.build",
+        "device.acceptance"
+      ],
+      "implementation": {
+        "recovery.build": [
+          "blocked"
+        ],
+        "device.acceptance": [
+          "blocked"
+        ]
+      },
+      "not_passed": [
+        "recovery.build",
+        "device.acceptance"
+      ],
+      "next_checks": [
+        "tool-preflight",
+        "target-device"
+      ]
+    },
+    "boot-missing-path": {
+      "action": [
+        "repair",
+        "reverify",
+        "plan"
+      ],
+      "reference_kind": "source",
+      "required_claims": [
+        "boot",
+        "campaign.finish",
+        "practice.finish",
+        "save.reload"
+      ],
+      "implementation": {},
+      "not_passed": [
+        "practice.finish",
+        "save.reload"
+      ],
+      "next_checks": [
+        "fixture-test"
+      ]
+    },
+    "misleading-save-test": {
+      "action": [
+        "reverify",
+        "repair",
+        "plan"
+      ],
+      "reference_kind": "source",
+      "required_claims": [
+        "save.reload"
+      ],
+      "implementation": {},
+      "not_passed": [
+        "save.reload"
+      ],
+      "next_checks": [
+        "fixture-test"
+      ]
+    },
+    "ineffective-harness": {
+      "action": [
+        "repair",
+        "reverify"
+      ],
+      "reference_kind": "source",
+      "required_claims": [
+        "movement.changed-input"
+      ],
+      "implementation": {},
+      "not_passed": [
+        "movement.changed-input"
+      ],
+      "next_checks": [
+        "harness-check"
+      ],
+      "observed_counts": {
+        "attempted": 4,
+        "exercised": 0
+      }
+    },
+    "stale-interruption": {
+      "action": [
+        "reverify"
+      ],
+      "reference_kind": "source",
+      "required_claims": [
+        "physics.jump"
+      ],
+      "implementation": {},
+      "not_passed": [
+        "physics.jump"
+      ],
+      "next_checks": [
+        "identity-check",
+        "fixture-test"
+      ],
+      "reuse_eligible": [],
+      "observed_runs": {
+        "jump-old": "passed",
+        "jump-next": "interrupted"
+      }
+    },
+    "missing-assets-crash": {
+      "action": [
+        "blocked",
+        "repair",
+        "reverify"
+      ],
+      "reference_kind": "source",
+      "required_claims": [
+        "audio.playback",
+        "evaluator.health"
+      ],
+      "implementation": {},
+      "not_passed": [
+        "audio.playback",
+        "evaluator.health"
+      ],
+      "next_checks": [
+        "tool-preflight"
+      ],
+      "observed_runs": {
+        "audio-test": "skipped",
+        "audio-comparator": "crashed"
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+Required scenarios: boot; campaign.finish; practice.finish; save.reload. A practice win must enter practice results, then return to board selection. Campaign completion enters credits. Save reload preserves current board and undo history.

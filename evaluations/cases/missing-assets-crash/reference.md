@@ -1,0 +1,1 @@
+Required scenarios: audio.playback; evaluator.health. Audio acceptance requires an executed comparison with the required original generated sound bank. A wrapper return code is not the comparator outcome.

@@ -1,0 +1,1 @@
+Required scenario: physics.jump. Expected acceleration is defined by the current reference and current source. A reusable result requires the exact source, reference, tools, flags, settings, and artifacts recorded for that run.

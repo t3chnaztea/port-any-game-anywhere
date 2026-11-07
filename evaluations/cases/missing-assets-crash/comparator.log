@@ -1,0 +1,3 @@
+Traceback (most recent call last):
+  File "compare.py", line 18, in main
+ValueError: expected nonempty audio samples

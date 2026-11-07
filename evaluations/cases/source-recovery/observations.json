@@ -1,0 +1,19 @@
+{
+  "provenance": "synthetic original x86-64 specimen observations",
+  "pairs": [
+    {
+      "input": 0,
+      "output": 2
+    },
+    {
+      "input": 10,
+      "output": 12
+    },
+    {
+      "input": 11,
+      "output": 10
+    }
+  ],
+  "recovered_build": null,
+  "whole_program_binary": null
+}

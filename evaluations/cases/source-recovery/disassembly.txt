@@ -1,0 +1,7 @@
+0000 mov eax, edi
+0002 cmp edi, 10
+0005 jg 0x0b
+0007 add eax, 2
+000a ret
+000b mov eax, 10
+0010 ret

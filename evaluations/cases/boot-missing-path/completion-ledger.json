@@ -1,0 +1,13 @@
+{
+  "claims": [
+    {
+      "id": "boot",
+      "implementation": "implemented",
+      "verification": "passed",
+      "evidence": [
+        "smoke.json"
+      ]
+    }
+  ],
+  "release_ready": true
+}

@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "id": "boot",
+      "observed": "title"
+    }
+  ],
+  "scope": "startup only"
+}

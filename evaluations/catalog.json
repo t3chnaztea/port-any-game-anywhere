@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "conditions": [
+    "skill",
+    "baseline"
+  ],
+  "repetitions": [
+    1,
+    2
+  ],
+  "expected_slots": 32,
+  "agent_contract": "agent-contract.md",
+  "expected_checks": "evaluator/expected.json",
+  "cases": [
+    {
+      "id": "normal-intake",
+      "path": "cases/normal-intake",
+      "files": [
+        "game.py",
+        "project.json",
+        "prompt.md",
+        "reference.md"
+      ]
+    },
+    {
+      "id": "source-recovery",
+      "path": "cases/source-recovery",
+      "files": [
+        "disassembly.txt",
+        "function.hex",
+        "observations.json",
+        "prompt.md",
+        "reference.md"
+      ]
+    },
+    {
+      "id": "absent-tools-device",
+      "path": "cases/absent-tools-device",
+      "files": [
+        "environment.json",
+        "project.json",
+        "prompt.md",
+        "reference.md",
+        "specimen.hex"
+      ]
+    },
+    {
+      "id": "boot-missing-path",
+      "path": "cases/boot-missing-path",
+      "files": [
+        "completion-ledger.json",
+        "game.py",
+        "prompt.md",
+        "reference.md",
+        "smoke.json"
+      ]
+    },
+    {
+      "id": "misleading-save-test",
+      "path": "cases/misleading-save-test",
+      "files": [
+        "prompt.md",
+        "reference.md",
+        "run.json",
+        "save_test.py"
+      ]
+    },
+    {
+      "id": "ineffective-harness",
+      "path": "cases/ineffective-harness",
+      "files": [
+        "controller.jsonl",
+        "harness.py",
+        "prompt.md",
+        "reference.md",
+        "summary.json"
+      ]
+    },
+    {
+      "id": "stale-interruption",
+      "path": "cases/stale-interruption",
+      "files": [
+        "checkpoint.json",
+        "current-reference.txt",
+        "physics.py",
+        "prompt.md",
+        "reference.md"
+      ]
+    },
+    {
+      "id": "missing-assets-crash",
+      "path": "cases/missing-assets-crash",
+      "files": [
+        "assets.json",
+        "audio-test.json",
+        "comparator.log",
+        "prompt.md",
+        "reference.md",
+        "wrapper.json"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{"run": 0, "requested_pad": 1, "baseline_pad": 0, "consumed_pad": 0, "player_x_before": 12, "player_x_after": 12}
+{"run": 1, "requested_pad": 2, "baseline_pad": 0, "consumed_pad": 0, "player_x_before": 12, "player_x_after": 12}
+{"run": 2, "requested_pad": 4, "baseline_pad": 0, "consumed_pad": 0, "player_x_before": 12, "player_x_after": 12}
+{"run": 3, "requested_pad": 8, "baseline_pad": 0, "consumed_pad": 0, "player_x_before": 12, "player_x_after": 12}

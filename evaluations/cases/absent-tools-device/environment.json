@@ -1,0 +1,18 @@
+{
+  "ghidra": {
+    "available": false
+  },
+  "java": {
+    "available": false
+  },
+  "linux_runtime": {
+    "available": false
+  },
+  "python": {
+    "available": true
+  },
+  "target_console": {
+    "available": false
+  },
+  "previous_console_results": []
+}

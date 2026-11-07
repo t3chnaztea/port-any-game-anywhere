@@ -1,0 +1,12 @@
+{
+  "exit_code": 0,
+  "retained_summary": {
+    "status": "passed",
+    "run_id": "older-audio-run"
+  },
+  "current_comparator": {
+    "id": "audio-comparator",
+    "status": "crashed",
+    "exit_code": 1
+  }
+}

@@ -1,0 +1,1 @@
+Required scenario: movement.changed-input. A mutation counts as exercised only when the game consumes a controller value different from the unchanged baseline. A requested value alone does not establish consumption.

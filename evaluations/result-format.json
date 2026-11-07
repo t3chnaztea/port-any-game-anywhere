@@ -1,0 +1,292 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Port Any Game Anywhere evaluation results",
+  "description": "The Python validator also checks the frozen 32-slot denominator, identities, protocol equality and case-specific behavior. This schema alone is insufficient.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "protocol",
+    "runs"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "protocol": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/protocol"
+        }
+      ]
+    },
+    "runs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/run"
+      }
+    }
+  },
+  "$defs": {
+    "protocol": {
+      "type": "object",
+      "required": [
+        "client",
+        "client_version",
+        "model",
+        "model_settings",
+        "tool_versions",
+        "permissions",
+        "resource_limits",
+        "initial_state",
+        "skill_revision"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "client": {
+          "const": "codex"
+        },
+        "client_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "model": {
+          "type": "string",
+          "minLength": 1
+        },
+        "model_settings": {
+          "type": "object"
+        },
+        "tool_versions": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "permissions": {
+          "const": {
+            "network": false,
+            "read_scope": "case-envelope",
+            "write_scope": "case-envelope",
+            "installation": false
+          }
+        },
+        "resource_limits": {
+          "type": "object",
+          "required": [
+            "wall_seconds",
+            "workers",
+            "memory_mb"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "wall_seconds": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "workers": {
+              "const": 1
+            },
+            "memory_mb": {
+              "type": "integer",
+              "minimum": 1
+            }
+          }
+        },
+        "initial_state": {
+          "type": "string",
+          "minLength": 1
+        },
+        "skill_revision": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "run": {
+      "type": "object",
+      "required": [
+        "case_id",
+        "condition",
+        "repetition",
+        "execution_status",
+        "protocol",
+        "skill_loaded",
+        "pack_sha256",
+        "suite_sha256",
+        "started_at",
+        "ended_at",
+        "metrics",
+        "artifacts",
+        "client_exit_code"
+      ],
+      "properties": {
+        "case_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "condition": {
+          "enum": [
+            "skill",
+            "baseline"
+          ]
+        },
+        "repetition": {
+          "enum": [
+            1,
+            2
+          ]
+        },
+        "execution_status": {
+          "enum": [
+            "completed",
+            "blocked",
+            "crashed",
+            "interrupted",
+            "invalid",
+            "skipped"
+          ]
+        },
+        "protocol": {
+          "$ref": "#/$defs/protocol"
+        },
+        "skill_loaded": {
+          "type": "boolean"
+        },
+        "pack_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "suite_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "started_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "ended_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "metrics": {
+          "type": "object",
+          "required": [
+            "elapsed_seconds",
+            "input_tokens",
+            "output_tokens",
+            "cost_usd",
+            "unavailable_reason"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "elapsed_seconds": {
+              "type": "number",
+              "minimum": 0
+            },
+            "input_tokens": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "output_tokens": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "cost_usd": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "unavailable_reason": {
+              "type": "string"
+            }
+          }
+        },
+        "artifacts": {
+          "type": "object",
+          "required": [
+            "transcript"
+          ],
+          "additionalProperties": {
+            "type": "object",
+            "required": [
+              "path",
+              "sha256"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            }
+          }
+        },
+        "review": {
+          "type": "object",
+          "required": [
+            "reviewer",
+            "independent",
+            "checks"
+          ],
+          "properties": {
+            "reviewer": {
+              "type": "string",
+              "minLength": 1
+            },
+            "independent": {
+              "const": true
+            },
+            "checks": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "passed",
+                  "evidence"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "passed": {
+                    "type": "boolean"
+                  },
+                  "evidence": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              }
+            }
+          }
+        },
+        "client_exit_code": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}
