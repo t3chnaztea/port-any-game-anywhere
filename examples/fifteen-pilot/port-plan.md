@@ -1,7 +1,7 @@
 # Fifteen reproduction plan
 
-Status: browser compilation blocked by absent Emscripten tools. Gameplay and
-device acceptance are untested. Reviewed on 2026-11-07.
+Status: browser build produced with locally scoped Emscripten 6.0.10. Gameplay,
+reference execution, and device acceptance are untested. Reviewed on 2026-11-07.
 
 ## Goal and boundary
 
@@ -28,7 +28,10 @@ outside tracked files. The observed source hash is not a publisher signature.
 The browser recipe needs Python 3.11+, CMake, Make, Perl, `emcc`, and `emcmake`.
 `pilot.py` verifies the archive, extracts safely, checks unchanged source, configures
 the upstream build, builds target `fifteen`, and generates the upstream page.
-It adds local attribution and changes navigation links only. It does not install
+It adds local attribution and changes navigation links only. Its CMake cache options
+set Firefox 79, Chrome 85, and Safari 15 as compilation minima because Emscripten
+6.0.10 rejects upstream's older Firefox/Chrome settings. Game code stays unchanged.
+These are compilation settings, not verified browser support. It does not install
 tools, discover tests, retry failures, patch game code, or start a server.
 
 Upstream macOS CMake requires Halibut, which is absent. A native reference build
@@ -40,7 +43,7 @@ state-comparison harness before claiming reference execution parity.
 | Milestone | Completion gate | Current result |
 | --- | --- | --- |
 | Pin source | Named archive, size/hash, notice, safe extraction verified | Source tooling checked; no game claim |
-| Build browser | Frozen toolchain; generated HTML, JS and WASM identities | Blocked: emcc/emcmake absent |
+| Build browser | Frozen toolchain; generated HTML, JS and WASM identities | Built with 6.0.10; see evidence/build-summary.json |
 | Compare state | Controlled boards, input mapping, completion, hint/solve, full history | Untested |
 | Follow game routes | Normal inputs cover every required inventory claim | Untested |
 | Verify devices | Same artifact on named desktop and actual iPhone | Untested |

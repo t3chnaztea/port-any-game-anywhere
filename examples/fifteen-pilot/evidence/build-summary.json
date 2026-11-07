@@ -1,0 +1,177 @@
+{
+  "format": "fifteen-pilot-build-summary-v1",
+  "observed_at": "2026-11-07T21:49:40.081402+00:00",
+  "status": "built",
+  "gameplay_verified": false,
+  "device_verified": false,
+  "reference_runtime_compared": false,
+  "source_archive": {
+    "path": ".work/fifteen-sdk6/puzzles-20260923.616da16.tar.gz",
+    "size": 2497958,
+    "sha256": "cc419c8060b4e22be398aa03e30651fbce146eee510645c303fb6f5f1b77b78e"
+  },
+  "source_tree_matches_archive": true,
+  "emsdk_commit": "1693ce7359fc9694f198694f902a2cc061239b86",
+  "emscripten_release": "6.0.10",
+  "emscripten_release_hash": "666337b525e673e769121856d175f6f52b8ead64",
+  "versions": {
+    "emcc": "emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 6.0.10 (d6c521a7f05449857c76bd99e396895583cf2083)",
+    "cmake": "cmake version 4.4.5",
+    "perl": "This is perl 5, version 34, subversion 1 (v5.34.1) built for darwin-thread-multi-2level",
+    "make": "GNU Make 3.81",
+    "node_on_path": "v26.13.0",
+    "python_on_path": "Python 3.15.2",
+    "node_in_sdk": "v24.19.0",
+    "python_in_sdk": "Python 3.13.3"
+  },
+  "sdk_downloads": [
+    {
+      "path": ".work/emsdk/downloads/666337b525e673e769121856d175f6f52b8ead64-wasm-binaries-arm64.tar.xz",
+      "size": 276811332,
+      "sha256": "084896c728d82e44d7aa54afc4a7bf64031dda83f3a4c47ee3164cece247cd76"
+    },
+    {
+      "path": ".work/emsdk/downloads/node-v24.19.0-darwin-arm64.tar.gz",
+      "size": 52234372,
+      "sha256": "8294b7aa9b03997481c06babf1e8b270c859358f27da57a11509afe537ac381d"
+    },
+    {
+      "path": ".work/emsdk/downloads/python-3.13.3-0-macos-arm64.tar.gz",
+      "size": 44280478,
+      "sha256": "2b0899d7ade9463b0c909ef23aeea27546a4f412637998d817a49718bc2bac19"
+    }
+  ],
+  "cmake_options": [
+    "-DCMAKE_BUILD_TYPE=Release",
+    "-DWASM=ON",
+    "-DMIN_FIREFOX_VERSION=79",
+    "-DMIN_CHROME_VERSION=85",
+    "-DMIN_SAFARI_VERSION=150000"
+  ],
+  "resource_controls": {
+    "nice": 20,
+    "build_jobs": 1,
+    "EMCC_CORES": 1,
+    "BINARYEN_CORES": 1,
+    "timeout_seconds_per_command": 180,
+    "maximum_log_bytes_per_command": 1048576
+  },
+  "monitored_startup_files_unchanged": [
+    ".emscripten",
+    ".zshrc",
+    ".zprofile",
+    ".bashrc",
+    ".bash_profile",
+    ".profile"
+  ],
+  "failed_attempt": {
+    "status": "failed",
+    "cause": "upstream minimum Firefox68/Chrome57 below Emscripten6.0.10 supported minima79/85",
+    "compile_log": {
+      "path": ".work/fifteen/build-web/compile.log",
+      "size": 2031,
+      "sha256": "061eeafbb9d0b0e1a04dcbbd49f7e88d3db12f88222bcd7c8b179f82f65170b3"
+    }
+  },
+  "outputs": [
+    {
+      "path": ".work/fifteen-sdk6/site/fifteen.html",
+      "size": 11078,
+      "sha256": "58a7b374d88def241aeee9beb9d2b82548af2e185bd4f29807aa23c2a2baa9b1"
+    },
+    {
+      "path": ".work/fifteen-sdk6/site/fifteen.js",
+      "size": 40682,
+      "sha256": "5307818c6ff394731e07e70318fb22f576f1d6c14b201910824508b40455b9f9"
+    },
+    {
+      "path": ".work/fifteen-sdk6/site/fifteen.wasm",
+      "size": 94568,
+      "sha256": "fba6dca2f323e0489d7bdfbcb210376afe186a25c3846a161b2601eb394edd97"
+    },
+    {
+      "path": ".work/fifteen-sdk6/site/LICENCE",
+      "size": 1350,
+      "sha256": "eb18a1d915cb923b2da9fb1e79bcdf677b17ebfaada9ce5d5252e384266029c6"
+    }
+  ],
+  "logs": [
+    {
+      "path": ".work/fifteen-sdk6/build-web/configure.log",
+      "size": 1649,
+      "sha256": "14491f20a672b15b872eb2184f8eccf8b21d969ef389c328b90eeedb8aaea03c"
+    },
+    {
+      "path": ".work/fifteen-sdk6/build-web/compile.log",
+      "size": 1917,
+      "sha256": "1ca8ea92ac5f665e741a5612e33ac6ae054c78b7d7692974976063bde80ce5ee"
+    },
+    {
+      "path": ".work/fifteen-sdk6/build-web/page.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "limits": [
+    "Build summary is not a game-evidence record.",
+    "No byte-for-byte rebuild comparison was performed.",
+    "Recorded versions and package identities are not a complete future cache-validity certificate."
+  ],
+  "sdk_configuration": {
+    "path": ".work/emsdk/.emscripten",
+    "sha256": "4b97836586e977f7553047617e7cd163142be2909eeae8ac6ede506f0e39adf1"
+  },
+  "syntax_check": {
+    "command": [
+      "node",
+      "--check",
+      ".work/fifteen-sdk6/site/fifteen.js"
+    ],
+    "exit_code": 0,
+    "limits": "Syntax only; the browser game was not executed."
+  },
+  "recipe_inputs": [
+    {
+      "path": "examples/fifteen-pilot/pilot.py",
+      "size": 11738,
+      "sha256": "df77603c92cde835eed87894addf9936c7c3d9437f351b3caf5c233f64fbffb9"
+    },
+    {
+      "path": "examples/fifteen-pilot/source-lock.json",
+      "size": 703,
+      "sha256": "858e75f6973785c44460dc478ade3f9d3a56249c5ffe35131868408a3579a983"
+    },
+    {
+      "path": "examples/fifteen-pilot/footer.html",
+      "size": 232,
+      "sha256": "55a1fe00e44ee5209006b3988cd730af72c68fc07623c8b2ec18fe2be8515dfa"
+    }
+  ],
+  "tool_executables": [
+    {
+      "name": "emcc",
+      "size": 1045,
+      "sha256": "498eba9b6aacffca1c358ba340fc7b37015d7867cb211c7f2d45784ee9310f03"
+    },
+    {
+      "name": "emcmake",
+      "size": 976,
+      "sha256": "18c8397cf60835533e0db88d1172e04fa0b753dea68e978149d923a9e6378af3"
+    },
+    {
+      "name": "clang",
+      "size": 119661264,
+      "sha256": "f126a277f97554cfc9535c36e028a82486a25ca76a04976760324d8173304098"
+    },
+    {
+      "name": "wasm-ld",
+      "size": 68826512,
+      "sha256": "0bfe3f4fe5ad0b3734c49ea582a3a2d15fe18e0c8d3bd8efaf1183fbb260d6de"
+    },
+    {
+      "name": "cmake",
+      "size": 14301512,
+      "sha256": "9fec3619ad7a0680df833f6bc644f57d09355c3598b01805e927d4e98e2d8a68"
+    }
+  ]
+}

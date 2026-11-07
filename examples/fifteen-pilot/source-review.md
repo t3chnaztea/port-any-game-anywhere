@@ -41,3 +41,15 @@ establish current touch support. Actual iPhone behavior remains unknown.
 
 This pilot can test the skill's source-based workflow once its gates pass. It
 cannot establish that the skill recovers missing source or creates a novel port.
+
+## Build diagnosis and result
+
+The first Emscripten 6.0.10 link rejected `MIN_FIREFOX_VERSION=68`. The installed
+official toolchain's [feature matrix](https://github.com/emscripten-core/emscripten/blob/d6c521a7f05449857c76bd99e396895583cf2083/tools/feature_matrix.py)
+sets minimum Firefox 79, Chrome 85, and Safari 150000. Its
+[linker validation](https://github.com/emscripten-core/emscripten/blob/d6c521a7f05449857c76bd99e396895583cf2083/tools/link.py)
+rejects lower nonzero values. Upstream exposes these as CMake cache options.
+Using those options allowed the browser build to complete without modifying game
+source. This is observed build evidence only. Browser compatibility and behavior
+remain untested. The first failed log and successful output identities are recorded
+in evidence/build-summary.json. No byte-for-byte rebuild comparison was performed.

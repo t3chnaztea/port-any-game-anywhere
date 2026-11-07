@@ -17,10 +17,17 @@ On 2026-11-07, the named archive was downloaded from the author's HTTPS site.
 Its identity and extracted source tree were checked. Relevant source was inspected.
 The pilot's safety tests passed. These are tooling results, not gameplay results.
 
-The host has CMake, Make, Perl, and Clang. It lacks `emcc`, `emcmake`, and Halibut.
-The browser build is blocked. Upstream's macOS CMake configuration requires Halibut.
-No native frontend, browser game route, desktop device, or iPhone was tested.
-No SDK was installed. No VM or background server was started.
+A local Emscripten 6.0.10 SDK was then installed inside ignored `.work/emsdk`.
+The browser build succeeded. [Build summary](evidence/build-summary.json) records
+the toolchain, flags, logs, and generated file identities. The first link failed
+because upstream requests browser versions older than this compiler supports.
+The wrapper now selects supported minima through upstream CMake options.
+This narrows compilation targets to Firefox 79, Chrome 85, and Safari 15 or newer.
+It does not establish that any browser version works.
+
+The SDK remains outside the default environment. No startup files were edited.
+Halibut remains absent. No native frontend, browser game route, desktop device,
+or iPhone was tested. No VM or background server was started.
 
 See [the plan](port-plan.md), [inventory](inventory.md), and the authoritative
 [completion ledger](completion-ledger.json). All game claims remain untested.
@@ -55,12 +62,12 @@ use the host's controls if the test requires a fully offline toolchain.
 
 ## Reproduce the build when prerequisites are available
 
-Review the pinned upstream CMake and Perl build code before execution. Obtain the
-Emscripten toolchain through a separately authorized setup task. This pilot does
-not install tools. Freeze and record its exact version before comparison.
+Review the pinned upstream CMake and Perl build code before execution.
+[Toolchain setup](toolchain-setup.md) gives the locally tested, pinned SDK steps.
+The pilot wrapper does not install tools. Freeze its exact version before comparison.
 
 ```sh
-python3 examples/fifteen-pilot/pilot.py build-web
+nice -n 20 python3 examples/fifteen-pilot/pilot.py build-web
 ```
 
 This executes the upstream browser recipe with one build job. Commands have a
@@ -68,15 +75,17 @@ This executes the upstream browser recipe with one build job. Commands have a
 log prevents success. Existing build output is not overwritten. Choose a fresh
 `--work-dir` before the action if a previous attempt left output there.
 
-Expected files, not yet produced by this pilot: `.work/fifteen/site/fifteen.html`,
-`fifteen.js`, `fifteen.wasm`, and `LICENCE`. Only the generated page's documentation
+The successful run used a fresh work directory, `.work/fifteen-sdk6`.
+Its `site/` contains `fifteen.html`, `fifteen.js`, `fifteen.wasm`, and `LICENCE`.
+A default fresh run would write `.work/fifteen/site/`.
+Only the generated page's documentation
 and home links are adapted to the author's site. Game code stays unchanged.
 The wrapper prints `BUILT` only after outputs exist. This does not close game gates.
 
 Serve the output locally only after the build succeeds:
 
 ```sh
-python3 -m http.server 8000 --bind 127.0.0.1 --directory .work/fifteen/site
+python3 -m http.server 8000 --bind 127.0.0.1 --directory .work/fifteen-sdk6/site
 ```
 
 Stop the foreground server with Ctrl+C. This binds only to the local computer.

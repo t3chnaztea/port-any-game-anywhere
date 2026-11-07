@@ -225,7 +225,9 @@ def build_web(work: Path) -> Path:
         raise PilotError("build output exists; use a new --work-dir with the pinned archive")
     build.mkdir()
     run_logged(["emcmake", "cmake", "-S", str(source), "-B", str(build),
-                "-DCMAKE_BUILD_TYPE=Release"], work, build / "configure.log")
+                "-DCMAKE_BUILD_TYPE=Release", "-DWASM=ON",
+                "-DMIN_FIREFOX_VERSION=79", "-DMIN_CHROME_VERSION=85",
+                "-DMIN_SAFARI_VERSION=150000"], work, build / "configure.log")
     run_logged(["cmake", "--build", str(build), "--target", "fifteen", "--parallel", "1"],
                work, build / "compile.log")
     site.mkdir()
