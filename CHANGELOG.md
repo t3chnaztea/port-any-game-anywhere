@@ -2,7 +2,7 @@
 
 ## Development source publication, 2026-11-07
 
-The user authorized pushing the development repository to GitHub. This is source publication, not an accepted beta or tagged release. Current Switchboard and evaluation cases are public regression material. A future blind claim requires fresh unpublished fixtures, evaluator-held source, enforced access limits and no prior exposure.
+Published the development source on GitHub. This is not an accepted beta or tagged release. Current Switchboard and evaluation cases are public regression material. A future blind claim requires fresh unpublished fixtures, evaluator-held source, enforced access limits and no prior exposure.
 
 ## Local implementation, 2026-11-07
 
