@@ -18,19 +18,19 @@ Other compatible clients remain untested. The skill needs an agent with access t
 
 | Component or route | Current state | Required evidence before a support claim |
 | --- | --- | --- |
-| Local development environment | Maintainer records macOS on arm64, Python 3.13, Node 26, Codex CLI 0.165.0, and Claude Code 2.1.319 as available | Record actual checks and their inputs in the release status |
-| Packaged Codex installation and live use | Pending | Explicit invocation, intake output, bounded reference loading, and interruption evaluation |
+| Local development environment | macOS/arm64; project checks used Python 3.15.2, Node 26.13.0 and Chrome 156.0.8078.80 | Other versions need their own results; configured CI is not a completed run |
+| Packaged Codex installation and live use | CLI 0.165.0 loaded the archive and completed a read-only intake smoke check | [Recorded smoke limits](../evaluations/smoke/codex/README.md); paired behavior and interruption evaluation remain pending |
 | Claude Code and other clients | Untested | Separate clean installation and live client evaluation |
-| Python record/check helpers | Development checks tracked in `STATUS.md` | Clean-checkout helper tests and invalid-record tests |
-| Source-led workflow | Designed; external pilot pending | Pinned Fifteen reproduction with required paths mapped to current evidence |
+| Python record/check helpers |35 local failure/lifecycle tests passed on macOS; one earlier intermittent cleanup result remains unresolved | Linux CI and broader clean-checkout coverage remain separate |
+| Source-led workflow | Pinned Fifteen browser build and three normal-input route checks | Remaining 51-claim acceptance matrix, independent reference and devices |
 | Binary-to-source recovery | Designed; controlled trial pending | Switchboard original binary, recovered buildable C, and independent behavior comparisons |
 | Ghidra on Linux x86-64 | Planned evaluated recovery route | Pinned Ghidra, Java, operating system, compiler, options, and original binary |
-| Native C to browser | Planned adapter; pilot pending | Reproducible build plus browser behavior and persistence checks |
+| Native C to browser | Switchboard source-authored build, ten cross-language tests and six browser checks passed | Source recovery, human listening and full device checklist remain pending |
 | Physical console targets | Guidance only | Named console, loader or firmware, exact artifact, and user-confirmed results |
-| Desktop browser and touch input | Device checks pending | Named desktop browser plus an actual named touch device and browser |
+| Desktop browser and touch input | Headless Chrome and touch emulation checked; physical acceptance pending | Named desktop operator plus an actual iPhone/Safari result |
 | Other agents, decompilers, CPUs, engines, or targets | Untested | A separate bounded evaluation; do not infer support from the universal method |
 
-At the initial environment review, Docker’s daemon, Ghidra, Java, and Emscripten were unavailable. Emscripten is a toolchain that compiles C or C++ for the web. Missing tools leave the relevant pilot pending. They do not justify a simulated pass.
+At initial preflight, Docker’s daemon, Ghidra, Java and Emscripten were unavailable. A later scoped setup installed Emscripten 6.0.10 inside ignored development storage. It built Fifteen without changing game code. See [the setup record](../examples/fifteen-pilot/toolchain-setup.md). Ghidra/Java/Linux recovery remains unverified. No system startup settings were changed.
 
 ## Dependency policy
 

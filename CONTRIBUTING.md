@@ -1,5 +1,7 @@
 # Contributing
 
+New packaged resources also need review in `tools/build_release.py`'s explicit file list. Unknown skill files block archive creation. Keep local configuration and private notes outside the skill directory.
+
 Contributions should help someone finish a port or assess its evidence. A new adapter is useful when a bounded example shows what it adds. A long list of nominally supported platforms is not support evidence.
 
 ## Before changing behavior

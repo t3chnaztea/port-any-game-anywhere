@@ -1,0 +1,23 @@
+{
+  "reference_kind": "Original source puzzle: game.py plus reference.md; MIT source and CC0 assets declared. Source inspection only.",
+  "release_ready": false,
+  "known_modes": [
+    "Title: boot returns title.",
+    "Campaign: completion advances boards; board 3 leads to credits.",
+    "Practice: any board selectable; completion must return to board selection. Source raises NotImplementedError."
+  ],
+  "next_milestone": "Browser rewrite appears feasible within the supplied scope. First implement practice board selection through completion back to selection, with keyboard and touch. Compare the resulting state against reference.md.",
+  "acceptance_gates": [
+    "Boot reaches title; campaign advances correctly and ends after board 3.",
+    "Practice selects every supported board and returns to selection after completion.",
+    "Save, restart and reload restore board, move count and undo history; source persistence is currently unimplemented.",
+    "Keyboard and touch routes pass on declared physical browser devices. Record exact device, OS and browser; no results exist.",
+    "Define presentation, storage-failure and performance criteria before release. Verify original generated graphics and audio."
+  ],
+  "unknowns": [
+    "Puzzle rules, board data, move handling and undo behavior are absent from supplied source.",
+    "Exact reference revision and asset files are unspecified.",
+    "Browser versions, devices, build tools, storage format and test operator are unspecified.",
+    "No runtime, fixture or device verification occurred."
+  ]
+}

@@ -1,5 +1,13 @@
 # Changelog
 
+## Local implementation, 2026-11-07
+
+Implemented the agent-neutral skill, optional Codex metadata, evidence helpers, negative tests, eight evaluation cases, isolated expectations, research, announcement history, contribution guidance and deterministic development packaging.
+
+Switchboard's C and TypeScript implementations are source-authored. Two independently found defects were fixed and rechecked. Pinned Fifteen source built with local Emscripten 6.0.10 after documented browser-minimum settings. Browser checks and a Codex installation smoke run are observations with separate limits.
+
+No beta, tag, remote repository, announcement or device acceptance is published. The32 paired slots, blinded recovery, physical-device evidence, fresh testers and final claim review remain open.
+
 ## Unreleased
 
 Development snapshot. No public beta has been accepted or released.

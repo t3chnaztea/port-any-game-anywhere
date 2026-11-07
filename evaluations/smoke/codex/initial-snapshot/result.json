@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "installation-smoke",
+  "status": "completed",
+  "started_at": "2026-11-07T21:49:37.410297+00:00",
+  "finished_at": "2026-11-07T21:49:57.379712+00:00",
+  "client": "codex-cli",
+  "client_version": "0.165.0",
+  "client_exit_code": 0,
+  "archive_sha256": "bf61d4f48aced4529200a0d57ded907310002dc022124fb99df1d6b92a48252a",
+  "model": "not reported in the retained event metadata",
+  "reported_usage": {
+    "input_tokens": 87164,
+    "cached_input_tokens": 54912,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 605,
+    "reasoning_output_tokens": 0
+  },
+  "facts": {
+    "project_local_skill_read": true,
+    "raw_case_files_read": true,
+    "release_ready_claim": false
+  },
+  "limits": [
+    "Not a paired benchmark",
+    "Read isolation from evaluator material was not enforced",
+    "Only synthetic intake was assessed",
+    "No runtime or physical-device result",
+    "Model identity and monetary cost were not established"
+  ],
+  "commands": [
+    {
+      "purpose": "workspace file discovery",
+      "exit_code": 0
+    },
+    {
+      "purpose": "git status in non-repository smoke directory",
+      "exit_code": 128
+    },
+    {
+      "purpose": "read installed skill, selected guidance and raw case files",
+      "exit_code": 0
+    }
+  ]
+}

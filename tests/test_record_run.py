@@ -73,6 +73,8 @@ class RecordRunTests(HelperFixture, unittest.TestCase):
     def test_pass_has_current_before_after_artifact_and_log(self):
         result = self.run_record()
         self.assertEqual("passed", result["status"])
+        self.assertEqual(hashlib.sha256(Path(record_run.__file__).read_bytes()).hexdigest(),
+                         result["identity_before"]["recording_tool"]["sha256"])
         self.assertEqual(result["identity_before"], result["identity_after"])
         self.assertEqual(0, result["outcome"]["exit_code"])
         self.assertEqual("assertion passed\n", Path(f"{self.output}.log").read_text())
@@ -143,7 +145,8 @@ class RecordRunTests(HelperFixture, unittest.TestCase):
             "time.sleep(30)\n")
         self.manifest["command"]["timeout_seconds"] = 0.15
         result = self.run_record()
-        self.assertEqual("interrupted", result["status"])
+        self.assertEqual("interrupted", result["status"],
+                         json.dumps({"record": result, "log": Path(f"{self.output}.log").read_text()}))
         time.sleep(0.9)
         self.assertFalse((self.base / "leaked-child.txt").exists(), "owned descendant must not survive timeout")
 

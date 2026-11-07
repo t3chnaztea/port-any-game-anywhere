@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "profiles": [
+    "original"
+  ],
+  "targets": [
+    "skill-release"
+  ],
+  "unknowns": [
+    "v0.1.0 beta is not accepted. Development archives are inspectable preparation only."
+  ],
+  "claims": [
+    {
+      "id": "skill.package",
+      "path": "Portable skill, references, templates, local installation and archive",
+      "profile": "original",
+      "target": "skill-release",
+      "required": true,
+      "implementation": "implemented",
+      "verification": "untested",
+      "required_evidence": [
+        "fixture-test",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Acceptance evidence is pending."
+      ]
+    },
+    {
+      "id": "helpers.negative",
+      "path": "Helpers reject stale, missing, failed and interrupted evidence",
+      "profile": "original",
+      "target": "skill-release",
+      "required": true,
+      "implementation": "implemented",
+      "verification": "blocked",
+      "required_evidence": [
+        "fixture-test"
+      ],
+      "evidence": [
+        "evidence/local/unit-checks-producer.json"
+      ],
+      "unknowns": [
+        "One combined-run descendant-timeout classification failed before later passes. The original exception is unknown; five isolated reproductions passed. Release acceptance remains blocked."
+      ]
+    },
+    {
+      "id": "example.source",
+      "path": "Source-authored puzzle comparison and regression checks",
+      "profile": "original",
+      "target": "skill-release",
+      "required": true,
+      "implementation": "implemented",
+      "verification": "untested",
+      "required_evidence": [
+        "fixture-test",
+        "review"
+      ],
+      "evidence": [
+        "evidence/local/unit-checks-producer.json"
+      ],
+      "unknowns": [
+        "Source-authored fixture checks passed. Independent full acceptance review is pending."
+      ]
+    },
+    {
+      "id": "example.recovery",
+      "path": "Blinded Linux/Ghidra recovery with source withheld",
+      "profile": "original",
+      "target": "skill-release",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "source-inspection",
+        "fixture-test",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Acceptance evidence is pending."
+      ]
+    },
+    {
+      "id": "pilot.fifteen",
+      "path": "Fifteen browser reproduction with accepted required routes",
+      "profile": "original",
+      "target": "skill-release",
+      "required": true,
+      "implementation": "implemented",
+      "verification": "untested",
+      "required_evidence": [
+        "fixture-test",
+        "automated-gameplay",
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Acceptance evidence is pending."
+      ]
+    },
+    {
+      "id": "device.desktop",
+      "path": "Chrome on macOS: complete example device checklist",
+      "profile": "original",
+      "target": "skill-release",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Acceptance evidence is pending."
+      ]
+    },
+    {
+      "id": "device.iphone",
+      "path": "Actual iPhone/Safari acceptance",
+      "profile": "original",
+      "target": "skill-release",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Acceptance evidence is pending."
+      ]
+    },
+    {
+      "id": "evaluation.paired",
+      "path": "Eight scenarios by two conditions by two repeats, matched and reviewed",
+      "profile": "original",
+      "target": "skill-release",
+      "required": true,
+      "implementation": "implemented",
+      "verification": "untested",
+      "required_evidence": [
+        "fixture-test",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Acceptance evidence is pending."
+      ]
+    },
+    {
+      "id": "onboarding.five",
+      "path": "At least four of five fresh testers complete a useful first plan within 20 minutes",
+      "profile": "original",
+      "target": "skill-release",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Acceptance evidence is pending."
+      ]
+    },
+    {
+      "id": "claims.audit",
+      "path": "Independent public claims, rights, licenses and artifact audit",
+      "profile": "original",
+      "target": "skill-release",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Acceptance evidence is pending."
+      ]
+    }
+  ]
+}

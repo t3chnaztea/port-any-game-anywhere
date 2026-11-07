@@ -8,11 +8,13 @@ The research and documentation discuss external repositories as primary sources.
 
 The Sonic CD Saturn case study summarizes internal source and documentation review. It distributes no SEGA game data, BIOS, disc image, soundtrack, or built game. Its internal reports have not yet received a public evidence export.
 
-The Fifteen pilot concerns the Fifteen game in [Simon Tatham’s Portable Puzzle Collection](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/). Its existing web port must be disclosed. Pin an upstream revision and preserve the applicable upstream license and notices when material is included in the pilot. Do not extend a license statement about source code to unrelated assets or platform dependencies.
+The Fifteen pilot pins `20260923.616da16` from [Simon Tatham’s Portable Puzzle Collection](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/). Its existing web port is disclosed. The exact [MIT notice](examples/fifteen-pilot/UPSTREAM-LICENCE) is preserved. Source archives and built outputs stay outside the skill package. Do not extend a source-code license statement to unrelated assets or platform dependencies.
 
 Switchboard is the project’s original controlled recovery fixture. Its example-specific notices identify which files are original code and which assets are CC0. The original source remains evaluator-held during a blinded trial. That temporary access restriction is an evaluation control, not a permanent proprietary dependency.
 
 ## Optional tools
+
+The source-authored browser example pins TypeScript7.0.2 under Apache-2.0 in its npm lockfile. Optional author checks pin Playwright1.64.1 under Apache-2.0 and PyYAML6.0.3 under MIT. Those packages are downloaded for development. They are not bundled in the skill archive. Their package notices remain with their installed copies.
 
 Codex, Claude Code, Ghidra, Java, compilers, debuggers, Emscripten, emulators, Node, Python, browsers, and device firmware have their own terms and licenses. The skill does not bundle them or automatically install them. Naming a tool is not an endorsement or a compatibility guarantee.
 

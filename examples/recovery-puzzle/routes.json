@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "origin": "independent breadth-first search of CONTRACT.md board rules",
+  "routes": [
+    {
+      "board": 1,
+      "actions": [
+        "right",
+        "right",
+        "right",
+        "right"
+      ],
+      "expected_practice_scene": "board_complete"
+    },
+    {
+      "board": 2,
+      "actions": [
+        "right",
+        "right",
+        "right",
+        "right",
+        "down",
+        "down",
+        "left",
+        "left",
+        "left",
+        "left"
+      ],
+      "expected_practice_scene": "board_complete"
+    },
+    {
+      "board": 3,
+      "actions": [
+        "left",
+        "left",
+        "left",
+        "left"
+      ],
+      "expected_practice_scene": "board_complete"
+    },
+    {
+      "board": 4,
+      "actions": [
+        "down",
+        "down",
+        "right",
+        "right",
+        "right",
+        "right"
+      ],
+      "expected_practice_scene": "board_complete"
+    },
+    {
+      "board": 5,
+      "actions": [
+        "right",
+        "down",
+        "right",
+        "right",
+        "up"
+      ],
+      "expected_practice_scene": "board_complete"
+    },
+    {
+      "board": 6,
+      "actions": [
+        "down",
+        "down",
+        "right",
+        "right",
+        "right",
+        "right"
+      ],
+      "expected_practice_scene": "board_complete"
+    }
+  ]
+}

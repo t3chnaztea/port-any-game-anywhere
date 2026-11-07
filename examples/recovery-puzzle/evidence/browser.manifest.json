@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "id": "switchboard-browser-current",
+  "claim_ids": [
+    "browser.campaign"
+  ],
+  "profile": "original",
+  "target": "browser",
+  "evidence_class": "automated-gameplay",
+  "command": {
+    "argv": [
+      ".work/venv/bin/python",
+      "tools/check_browser.py"
+    ],
+    "cwd": "../../..",
+    "timeout_seconds": 60,
+    "output_limit_bytes": 1048576
+  },
+  "inputs": [
+    {
+      "role": "source",
+      "path": "../web/engine.ts"
+    },
+    {
+      "role": "source",
+      "path": "../web/app.ts"
+    },
+    {
+      "role": "reference",
+      "path": "../CONTRACT.md"
+    },
+    {
+      "role": "fixture",
+      "path": "../../../tools/check_browser.py"
+    },
+    {
+      "role": "fixture",
+      "path": "../routes.json"
+    },
+    {
+      "role": "config",
+      "path": "../../../requirements-dev.txt"
+    },
+    {
+      "role": "asset",
+      "path": "../../../.work/switchboard/site/app.js"
+    },
+    {
+      "role": "asset",
+      "path": "../../../.work/switchboard/site/engine.js"
+    },
+    {
+      "role": "asset",
+      "path": "../../../.work/switchboard/site/index.html"
+    },
+    {
+      "role": "asset",
+      "path": "../../../.work/switchboard/site/style.css"
+    }
+  ],
+  "tools": [
+    {
+      "path": "../../../.work/venv/bin/python",
+      "version_argv": [
+        "../../../.work/venv/bin/python",
+        "-c",
+        "import sys,importlib.metadata as m;print(sys.version);print(\"playwright\",m.version(\"playwright\"));print(\"greenlet\",m.version(\"greenlet\"));print(\"pyee\",m.version(\"pyee\"))"
+      ],
+      "flags": []
+    },
+    {
+      "path": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "version_argv": [
+        "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+        "--version"
+      ],
+      "flags": [
+        "--headless"
+      ]
+    }
+  ],
+  "environment": [
+    "PATH",
+    "LANG",
+    "LC_ALL",
+    "PYTHONPATH",
+    "PLAYWRIGHT_BROWSERS_PATH"
+  ],
+  "artifacts": [
+    "../../../.work/browser/report.json",
+    "../../../.work/browser/desktop.png",
+    "../../../.work/browser/touch-emulation.png",
+    "../../../.work/browser/exported-save.txt"
+  ]
+}

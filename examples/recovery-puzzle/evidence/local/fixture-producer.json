@@ -1,0 +1,375 @@
+{
+  "artifacts": [],
+  "child_pid": 80007,
+  "claim_ids": [
+    "practice.board-1",
+    "practice.board-2",
+    "practice.board-3",
+    "practice.board-4",
+    "practice.board-5",
+    "practice.board-6",
+    "campaign.finish",
+    "doors.reverse",
+    "save.cold-undo",
+    "save.invalid",
+    "save.failed",
+    "undo.capacity",
+    "input.invalid"
+  ],
+  "command": {
+    "argv": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_switchboard.py",
+      "-v"
+    ],
+    "cwd": "../../..",
+    "output_limit_bytes": 1048576,
+    "timeout_seconds": 45
+  },
+  "created_at": "2026-11-07T22:16:50.548937+00:00",
+  "errors": [],
+  "evidence_class": "fixture-test",
+  "finished_at": "2026-11-07T22:16:54.113788+00:00",
+  "id": "switchboard-fixture-producer-pinned",
+  "identity_after": {
+    "environment": {
+      "LANG": {
+        "present": true,
+        "sha256": "99fed2d548c2eb1022f4067f97fe838a2c3ea60ee0e0f53086788505c3ababad"
+      },
+      "LC_ALL": {
+        "present": true,
+        "sha256": "99fed2d548c2eb1022f4067f97fe838a2c3ea60ee0e0f53086788505c3ababad"
+      },
+      "NODE_OPTIONS": {
+        "present": false,
+        "sha256": null
+      },
+      "PATH": {
+        "present": true,
+        "sha256": "9dde8cabfb03c9c09c396684cb18b0f865d4d3512559aa8c1624a47ff95ce946"
+      },
+      "PYTHONPATH": {
+        "present": false,
+        "sha256": null
+      }
+    },
+    "files": [
+      {
+        "exists": true,
+        "path": "../fixture-producer.manifest.json",
+        "role": "manifest",
+        "sha256": "a2a5d1accf601156485265508d634024a169b435542043155aecd6334e157403",
+        "size": 1815
+      },
+      {
+        "exists": true,
+        "path": "../../reference/switchboard.c",
+        "role": "source",
+        "sha256": "763c99c711a22056404d2fb597ff45412a41e54ea6b0aacb487573734b2da20e",
+        "size": 8534
+      },
+      {
+        "exists": true,
+        "path": "../../web/engine.ts",
+        "role": "source",
+        "sha256": "dd23dfa5cb453cec4d04137eeea45c046ee7aa8ea4acb41df84e864ab4a80166",
+        "size": 5630
+      },
+      {
+        "exists": true,
+        "path": "../../web/cli.ts",
+        "role": "source",
+        "sha256": "a49afdb92fc0436cf73bb0668b29fed3a73671a571843e3d6381a2f2f6e5e65f",
+        "size": 1198
+      },
+      {
+        "exists": true,
+        "path": "../../CONTRACT.md",
+        "role": "reference",
+        "sha256": "6b05f94abe330c4ab5f4abd4070e8371905061d1a947f0776fe278c8141cd1a4",
+        "size": 4205
+      },
+      {
+        "exists": true,
+        "path": "../../../../tests/test_switchboard.py",
+        "role": "fixture",
+        "sha256": "c545c8c05f4d93ff378a1077bc68f6dd0309be78ddd1379ccd0a0d0f625091c8",
+        "size": 8874
+      },
+      {
+        "exists": true,
+        "path": "../../routes.json",
+        "role": "fixture",
+        "sha256": "b95a00d4e2eb9f374e803d7ef73e47b5fdf061bbf79c170358b1aef5aee5752e",
+        "size": 1344
+      }
+    ],
+    "invoked_executable": {
+      "exists": true,
+      "path": "../../../../../../../../opt/homebrew/bin/python3",
+      "sha256": "6cc907e4a022fefc843bcd93954eaf5a2cbfc77a095640bfadeeed96154190c5",
+      "size": 34640
+    },
+    "recording_tool": {
+      "exists": true,
+      "id": "record_run.py",
+      "sha256": "dbab1fe1c963f2b61bc06450d77848124fa4186bab19bc49423238484b3d0776",
+      "size": 17492
+    },
+    "tools": [
+      {
+        "file": {
+          "exists": true,
+          "path": "../../../../../../../../opt/homebrew/bin/python3",
+          "sha256": "6cc907e4a022fefc843bcd93954eaf5a2cbfc77a095640bfadeeed96154190c5",
+          "size": 34640
+        },
+        "flags": [],
+        "requested": "python3",
+        "version_argv": [
+          "python3",
+          "--version"
+        ]
+      },
+      {
+        "file": {
+          "exists": true,
+          "path": "../../../../../../../../usr/bin/clang",
+          "sha256": "34129c71a01a74f7f3b2443521519b2e5447553fa187f5fcafaaf8c42cc192e2",
+          "size": 200560
+        },
+        "flags": [
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror"
+        ],
+        "requested": "clang",
+        "version_argv": [
+          "clang",
+          "--version"
+        ]
+      },
+      {
+        "file": {
+          "exists": true,
+          "path": "../../../../../../../../opt/homebrew/bin/node",
+          "sha256": "64e4f47aef084a288c443ebe9a0091a34acba03ad176fb612b6e7d90784ff93d",
+          "size": 132848
+        },
+        "flags": [],
+        "requested": "node",
+        "version_argv": [
+          "node",
+          "--version"
+        ]
+      }
+    ]
+  },
+  "identity_before": {
+    "environment": {
+      "LANG": {
+        "present": true,
+        "sha256": "99fed2d548c2eb1022f4067f97fe838a2c3ea60ee0e0f53086788505c3ababad"
+      },
+      "LC_ALL": {
+        "present": true,
+        "sha256": "99fed2d548c2eb1022f4067f97fe838a2c3ea60ee0e0f53086788505c3ababad"
+      },
+      "NODE_OPTIONS": {
+        "present": false,
+        "sha256": null
+      },
+      "PATH": {
+        "present": true,
+        "sha256": "9dde8cabfb03c9c09c396684cb18b0f865d4d3512559aa8c1624a47ff95ce946"
+      },
+      "PYTHONPATH": {
+        "present": false,
+        "sha256": null
+      }
+    },
+    "files": [
+      {
+        "exists": true,
+        "path": "../fixture-producer.manifest.json",
+        "role": "manifest",
+        "sha256": "a2a5d1accf601156485265508d634024a169b435542043155aecd6334e157403",
+        "size": 1815
+      },
+      {
+        "exists": true,
+        "path": "../../reference/switchboard.c",
+        "role": "source",
+        "sha256": "763c99c711a22056404d2fb597ff45412a41e54ea6b0aacb487573734b2da20e",
+        "size": 8534
+      },
+      {
+        "exists": true,
+        "path": "../../web/engine.ts",
+        "role": "source",
+        "sha256": "dd23dfa5cb453cec4d04137eeea45c046ee7aa8ea4acb41df84e864ab4a80166",
+        "size": 5630
+      },
+      {
+        "exists": true,
+        "path": "../../web/cli.ts",
+        "role": "source",
+        "sha256": "a49afdb92fc0436cf73bb0668b29fed3a73671a571843e3d6381a2f2f6e5e65f",
+        "size": 1198
+      },
+      {
+        "exists": true,
+        "path": "../../CONTRACT.md",
+        "role": "reference",
+        "sha256": "6b05f94abe330c4ab5f4abd4070e8371905061d1a947f0776fe278c8141cd1a4",
+        "size": 4205
+      },
+      {
+        "exists": true,
+        "path": "../../../../tests/test_switchboard.py",
+        "role": "fixture",
+        "sha256": "c545c8c05f4d93ff378a1077bc68f6dd0309be78ddd1379ccd0a0d0f625091c8",
+        "size": 8874
+      },
+      {
+        "exists": true,
+        "path": "../../routes.json",
+        "role": "fixture",
+        "sha256": "b95a00d4e2eb9f374e803d7ef73e47b5fdf061bbf79c170358b1aef5aee5752e",
+        "size": 1344
+      }
+    ],
+    "invoked_executable": {
+      "exists": true,
+      "path": "../../../../../../../../opt/homebrew/bin/python3",
+      "sha256": "6cc907e4a022fefc843bcd93954eaf5a2cbfc77a095640bfadeeed96154190c5",
+      "size": 34640
+    },
+    "recording_tool": {
+      "exists": true,
+      "id": "record_run.py",
+      "sha256": "dbab1fe1c963f2b61bc06450d77848124fa4186bab19bc49423238484b3d0776",
+      "size": 17492
+    },
+    "tools": [
+      {
+        "file": {
+          "exists": true,
+          "path": "../../../../../../../../opt/homebrew/bin/python3",
+          "sha256": "6cc907e4a022fefc843bcd93954eaf5a2cbfc77a095640bfadeeed96154190c5",
+          "size": 34640
+        },
+        "flags": [],
+        "requested": "python3",
+        "version_argv": [
+          "python3",
+          "--version"
+        ]
+      },
+      {
+        "file": {
+          "exists": true,
+          "path": "../../../../../../../../usr/bin/clang",
+          "sha256": "34129c71a01a74f7f3b2443521519b2e5447553fa187f5fcafaaf8c42cc192e2",
+          "size": 200560
+        },
+        "flags": [
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror"
+        ],
+        "requested": "clang",
+        "version_argv": [
+          "clang",
+          "--version"
+        ]
+      },
+      {
+        "file": {
+          "exists": true,
+          "path": "../../../../../../../../opt/homebrew/bin/node",
+          "sha256": "64e4f47aef084a288c443ebe9a0091a34acba03ad176fb612b6e7d90784ff93d",
+          "size": 132848
+        },
+        "flags": [],
+        "requested": "node",
+        "version_argv": [
+          "node",
+          "--version"
+        ]
+      }
+    ]
+  },
+  "log": {
+    "exists": true,
+    "path": "fixture-producer.json.log",
+    "sha256": "cfcd3a4315c9d40ef2616619e695624ae5b4a8195b8a384d52e61c763e140634",
+    "size": 1541
+  },
+  "manifest_path": "../fixture-producer.manifest.json",
+  "outcome": {
+    "bytes": 1541,
+    "exit_code": 0,
+    "signal": null,
+    "termination_reason": null,
+    "truncated": false
+  },
+  "profile": "original",
+  "record_type": "machine",
+  "schema_version": 1,
+  "started_at": "2026-11-07T22:16:50.636247+00:00",
+  "status": "passed",
+  "target": "host-comparison",
+  "tool_versions": [
+    {
+      "argv": [
+        "python3",
+        "--version"
+      ],
+      "bytes": 14,
+      "exit_code": 0,
+      "output": "Python 3.15.2\n",
+      "path": "python3",
+      "sha256": "b01b5da7ac6a0ecc5ff1aee7998c4ad10df616dc53585c5e44d3c6b916cfaf11",
+      "termination_reason": null,
+      "truncated": false
+    },
+    {
+      "argv": [
+        "clang",
+        "--version"
+      ],
+      "bytes": 200,
+      "exit_code": 0,
+      "output": "Apple clang version 21.0.0 (clang-2100.4.1.1)\nTarget: arm64-apple-darwin27.0.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+      "path": "clang",
+      "sha256": "b8a2569d699eec50baaf1719096d0801d16fb28fbcb2df7ffd0a07cd26d9fd47",
+      "termination_reason": null,
+      "truncated": false
+    },
+    {
+      "argv": [
+        "node",
+        "--version"
+      ],
+      "bytes": 9,
+      "exit_code": 0,
+      "output": "v26.13.0\n",
+      "path": "node",
+      "sha256": "d4b8a831ea4925f1c54be7746ec0b846cb04bbc35295b64ccdb2101bfcf5d70c",
+      "termination_reason": null,
+      "truncated": false
+    }
+  ]
+}

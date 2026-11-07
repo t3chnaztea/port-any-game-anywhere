@@ -1,0 +1,22 @@
+name: Port milestone report
+description: Share a milestone and the evidence that supports it.
+body:
+  - type: textarea
+    id: setup
+    attributes:
+      label: Game, reference, target, and permitted data
+    validations:
+      required: true
+  - type: textarea
+    id: milestone
+    attributes:
+      label: Milestone, required paths, and observed result
+    validations:
+      required: true
+  - type: textarea
+    id: limits
+    attributes:
+      label: Evidence classes, cost, failures, and open gates
+      description: Keep emulator, real-device, and source-inspection results separate.
+    validations:
+      required: true

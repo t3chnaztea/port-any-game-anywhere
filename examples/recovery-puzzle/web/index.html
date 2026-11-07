@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="color-scheme" content="light">
+ <title>Switchboard · Port Any Game Anywhere</title>
+ <link rel="stylesheet" href="style.css">
+ <script type="module" src="app.js"></script>
+</head>
+<body>
+ <main>
+  <header><a class="wordmark" href="#about">PORT ANY GAME ANYWHERE / EXAMPLE 01</a><span class="tag">SOURCE-AUTHORED EXAMPLE</span></header>
+  <div class="layout">
+   <section class="intro" aria-labelledby="title">
+    <p class="eyebrow">A small game. A complete contract.</p>
+    <h1 id="title">Switchboard</h1>
+    <p class="lede">Open the door. Reach the exit.<br>Keep your progress intact.</p>
+    <p>Step onto <strong>S</strong> to toggle the door. Reach <strong>E</strong> to finish a board. Use the arrow keys, the direction buttons, or an adjacent square.</p>
+    <div class="start">
+     <button id="campaign" class="primary">Start campaign</button>
+     <label for="board-select">Practice board</label>
+     <div class="practice"><select id="board-select" aria-label="Practice board"><option value="1">01 · First contact</option><option value="2">02 · Long way round</option><option value="3">03 · Reverse signal</option><option value="4">04 · Two routes</option><option value="5">05 · Cross connection</option><option value="6">06 · Last circuit</option></select><button id="practice">Play</button></div>
+    </div>
+    <aside id="about"><p class="eyebrow">What this example proves</p><p>This playable build demonstrates a small game contract. Automated comparisons cover selected behavior. Source recovery and real-device acceptance remain open.</p><a href="https://agentskills.io/specification">Open Agent Skills format ↗</a></aside>
+   </section>
+   <section class="play" aria-label="Game">
+    <div class="game-heading"><span id="board-label">BOARD 01 / 06</span><span id="mode-label">CAMPAIGN</span></div>
+    <div id="board" role="group" aria-label="Switchboard board"></div>
+    <div class="stats"><span>Moves <strong id="moves">0</strong></span><span id="door-state">Door closed</span><button id="mute" aria-pressed="false">Sound on</button></div>
+    <p id="status" role="status" aria-live="polite">Start a campaign or choose a practice board.</p>
+    <div class="controls">
+     <div class="dpad" aria-label="Direction controls"><button data-action="up" aria-label="Move up">↑</button><button data-action="left" aria-label="Move left">←</button><button data-action="down" aria-label="Move down">↓</button><button data-action="right" aria-label="Move right">→</button></div>
+     <div class="actions"><button data-action="undo">Undo</button><button data-action="restart">Restart board</button><button data-action="next">Next board</button><button data-action="menu">Title</button></div>
+    </div>
+    <div class="storage" aria-label="Save controls"><button id="save">Save in browser</button><button id="load">Load saved game</button><button id="export">Export save</button><label class="file-button">Import save<input id="import" type="file" accept=".txt,text/plain"></label></div>
+    <p class="storage-note">Saving includes undo history. A failed load leaves the current game intact. Browser saves stay on this device.</p>
+   </section>
+  </div>
+  <footer><span>YOUR PORT IS MORE THAN ITS FIRST FRAME.</span><span>Original code: MIT · No proprietary game assets</span></footer>
+ </main>
+</body>
+</html>

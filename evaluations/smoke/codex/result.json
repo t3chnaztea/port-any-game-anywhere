@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "installation-smoke",
+  "status": "completed",
+  "started_at": "2026-11-07T22:19:23.296198+00:00",
+  "finished_at": "2026-11-07T22:19:44.186923+00:00",
+  "client": "codex-cli",
+  "client_version": "0.165.0",
+  "client_exit_code": 0,
+  "archive_sha256": "e1282e968f1aef8654b0115648bc442d713e032bae6dda5279802bfd1b4c2fa5",
+  "model": "not reported in the retained event metadata",
+  "reported_usage": {
+    "input_tokens": 87249,
+    "cached_input_tokens": 54912,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 698,
+    "reasoning_output_tokens": 0
+  },
+  "facts": {
+    "project_local_skill_read": true,
+    "raw_case_files_read": true,
+    "release_ready_claim": false
+  },
+  "limits": [
+    "Not a paired benchmark",
+    "Read isolation from evaluator material was not enforced",
+    "Only synthetic intake was assessed",
+    "No runtime or physical-device result",
+    "Model identity and monetary cost were not established"
+  ],
+  "commands": [
+    {
+      "purpose": "local skill and case read command",
+      "exit_code": 0
+    },
+    {
+      "purpose": "local skill and case read command",
+      "exit_code": 128
+    },
+    {
+      "purpose": "local skill and case read command",
+      "exit_code": 0
+    },
+    {
+      "purpose": "local skill and case read command",
+      "exit_code": 0
+    }
+  ]
+}

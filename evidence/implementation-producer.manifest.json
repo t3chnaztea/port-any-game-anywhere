@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "id": "implementation-unit-checks-producer-pinned",
+  "claim_ids": [
+    "helpers.negative",
+    "example.source"
+  ],
+  "profile": "original",
+  "target": "skill-release",
+  "evidence_class": "fixture-test",
+  "command": {
+    "argv": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "cwd": "..",
+    "timeout_seconds": 60,
+    "output_limit_bytes": 1048576
+  },
+  "inputs": [
+    {
+      "role": "source",
+      "path": "../skills/port-any-game-anywhere/SKILL.md"
+    },
+    {
+      "role": "source",
+      "path": "../skills/port-any-game-anywhere/adapters/console.md"
+    },
+    {
+      "role": "source",
+      "path": "../skills/port-any-game-anywhere/adapters/ghidra-linux-x86.md"
+    },
+    {
+      "role": "source",
+      "path": "../skills/port-any-game-anywhere/adapters/native-to-browser.md"
+    },
+    {
+      "role": "source",
+      "path": "../skills/port-any-game-anywhere/agents/openai.yaml"
+    },
+    {
+      "role": "source",
+      "path": "../skills/port-any-game-anywhere/references/INDEX.md"
+    },
+    {
+      "role": "source",
+      "path": "../skills/port-any-game-anywhere/references/defect-loop.md"
+    },
+    {
+      "role": "source",
+      "path": "../skills/port-any-game-anywhere/references/efficient-agent-work.md"
+    },
+    {
+      "role": "source",
+      "path": "../skills/port-any-game-anywhere/references/intake-feasibility.md"
+    },
+    {
+      "role": "source",
+      "path": "../skills/port-any-game-anywhere/references/inventory-fidelity.md"
+    },
+    {
+      "role": "source",
+      "path": "../skills/port-any-game-anywhere/references/record-format.md"
+    },
+    {
+      "role": "source",
+      "path": "../skills/port-any-game-anywhere/references/source-recovery.md"
+    },
+    {
+      "role": "source",
+      "path": "../skills/port-any-game-anywhere/references/verification.md"
+    },
+    {
+      "role": "source",
+      "path": "../skills/port-any-game-anywhere/scripts/check_port.py"
+    },
+    {
+      "role": "source",
+      "path": "../skills/port-any-game-anywhere/scripts/record_run.py"
+    },
+    {
+      "role": "source",
+      "path": "../skills/port-any-game-anywhere/templates/bug.md"
+    },
+    {
+      "role": "source",
+      "path": "../skills/port-any-game-anywhere/templates/completion-ledger.json"
+    },
+    {
+      "role": "source",
+      "path": "../skills/port-any-game-anywhere/templates/coverage.md"
+    },
+    {
+      "role": "source",
+      "path": "../skills/port-any-game-anywhere/templates/handoff.md"
+    },
+    {
+      "role": "source",
+      "path": "../skills/port-any-game-anywhere/templates/manual-evidence.json"
+    },
+    {
+      "role": "source",
+      "path": "../skills/port-any-game-anywhere/templates/port-plan.md"
+    },
+    {
+      "role": "source",
+      "path": "../skills/port-any-game-anywhere/templates/release-audit.md"
+    },
+    {
+      "role": "source",
+      "path": "../skills/port-any-game-anywhere/templates/run-manifest.json"
+    },
+    {
+      "role": "source",
+      "path": "../skills/port-any-game-anywhere/templates/source-map.md"
+    },
+    {
+      "role": "fixture",
+      "path": "../tests/test_check_port.py"
+    },
+    {
+      "role": "fixture",
+      "path": "../tests/test_record_run.py"
+    },
+    {
+      "role": "fixture",
+      "path": "../tests/test_release.py"
+    },
+    {
+      "role": "fixture",
+      "path": "../tests/test_switchboard.py"
+    },
+    {
+      "role": "source",
+      "path": "../tools/build_release.py"
+    },
+    {
+      "role": "source",
+      "path": "../examples/recovery-puzzle/reference/switchboard.c"
+    },
+    {
+      "role": "source",
+      "path": "../examples/recovery-puzzle/web/engine.ts"
+    },
+    {
+      "role": "source",
+      "path": "../examples/recovery-puzzle/web/cli.ts"
+    },
+    {
+      "role": "config",
+      "path": "../VERSION"
+    },
+    {
+      "role": "config",
+      "path": "../LICENSE"
+    }
+  ],
+  "tools": [
+    {
+      "path": "python3",
+      "version_argv": [
+        "python3",
+        "--version"
+      ],
+      "flags": []
+    },
+    {
+      "path": "clang",
+      "version_argv": [
+        "clang",
+        "--version"
+      ],
+      "flags": [
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror"
+      ]
+    },
+    {
+      "path": "node",
+      "version_argv": [
+        "node",
+        "--version"
+      ],
+      "flags": []
+    }
+  ],
+  "environment": [
+    "PATH",
+    "LANG",
+    "LC_ALL",
+    "NODE_OPTIONS",
+    "PYTHONPATH",
+    "TMPDIR"
+  ],
+  "artifacts": []
+}

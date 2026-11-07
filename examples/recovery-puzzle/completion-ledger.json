@@ -1,0 +1,339 @@
+{
+  "schema_version": 1,
+  "profiles": [
+    "original",
+    "enhanced"
+  ],
+  "targets": [
+    "host-comparison",
+    "browser",
+    "iphone",
+    "linux-x86-64"
+  ],
+  "unknowns": [
+    "Source-authored example only. Blinded recovery and real-device acceptance remain open."
+  ],
+  "claims": [
+    {
+      "id": "practice.board-1",
+      "path": "Practice board 1: start, normal-input completion, rejected advance, undo completion",
+      "profile": "original",
+      "target": "host-comparison",
+      "required": true,
+      "implementation": "implemented",
+      "verification": "passed",
+      "required_evidence": [
+        "fixture-test"
+      ],
+      "evidence": [
+        "evidence/local/fixture-producer.json"
+      ],
+      "unknowns": []
+    },
+    {
+      "id": "practice.board-2",
+      "path": "Practice board 2: start, normal-input completion, rejected advance, undo completion",
+      "profile": "original",
+      "target": "host-comparison",
+      "required": true,
+      "implementation": "implemented",
+      "verification": "passed",
+      "required_evidence": [
+        "fixture-test"
+      ],
+      "evidence": [
+        "evidence/local/fixture-producer.json"
+      ],
+      "unknowns": []
+    },
+    {
+      "id": "practice.board-3",
+      "path": "Practice board 3: start, normal-input completion, rejected advance, undo completion",
+      "profile": "original",
+      "target": "host-comparison",
+      "required": true,
+      "implementation": "implemented",
+      "verification": "passed",
+      "required_evidence": [
+        "fixture-test"
+      ],
+      "evidence": [
+        "evidence/local/fixture-producer.json"
+      ],
+      "unknowns": []
+    },
+    {
+      "id": "practice.board-4",
+      "path": "Practice board 4: start, normal-input completion, rejected advance, undo completion",
+      "profile": "original",
+      "target": "host-comparison",
+      "required": true,
+      "implementation": "implemented",
+      "verification": "passed",
+      "required_evidence": [
+        "fixture-test"
+      ],
+      "evidence": [
+        "evidence/local/fixture-producer.json"
+      ],
+      "unknowns": []
+    },
+    {
+      "id": "practice.board-5",
+      "path": "Practice board 5: start, normal-input completion, rejected advance, undo completion",
+      "profile": "original",
+      "target": "host-comparison",
+      "required": true,
+      "implementation": "implemented",
+      "verification": "passed",
+      "required_evidence": [
+        "fixture-test"
+      ],
+      "evidence": [
+        "evidence/local/fixture-producer.json"
+      ],
+      "unknowns": []
+    },
+    {
+      "id": "practice.board-6",
+      "path": "Practice board 6: start, normal-input completion, rejected advance, undo completion",
+      "profile": "original",
+      "target": "host-comparison",
+      "required": true,
+      "implementation": "implemented",
+      "verification": "passed",
+      "required_evidence": [
+        "fixture-test"
+      ],
+      "evidence": [
+        "evidence/local/fixture-producer.json"
+      ],
+      "unknowns": []
+    },
+    {
+      "id": "campaign.finish",
+      "path": "Campaign: complete six boards, advance five boundaries, enter final scene",
+      "profile": "original",
+      "target": "host-comparison",
+      "required": true,
+      "implementation": "implemented",
+      "verification": "passed",
+      "required_evidence": [
+        "fixture-test"
+      ],
+      "evidence": [
+        "evidence/local/fixture-producer.json"
+      ],
+      "unknowns": []
+    },
+    {
+      "id": "doors.reverse",
+      "path": "Switch reversal, closed door and walls preserve blocked state",
+      "profile": "original",
+      "target": "host-comparison",
+      "required": true,
+      "implementation": "implemented",
+      "verification": "passed",
+      "required_evidence": [
+        "fixture-test"
+      ],
+      "evidence": [
+        "evidence/local/fixture-producer.json"
+      ],
+      "unknowns": []
+    },
+    {
+      "id": "save.cold-undo",
+      "path": "Cold load restores state, sound and undo; both save encodings match",
+      "profile": "original",
+      "target": "host-comparison",
+      "required": true,
+      "implementation": "implemented",
+      "verification": "passed",
+      "required_evidence": [
+        "fixture-test"
+      ],
+      "evidence": [
+        "evidence/local/fixture-producer.json"
+      ],
+      "unknowns": []
+    },
+    {
+      "id": "save.invalid",
+      "path": "Malformed and valid-checksum invalid states preserve current state",
+      "profile": "original",
+      "target": "host-comparison",
+      "required": true,
+      "implementation": "implemented",
+      "verification": "passed",
+      "required_evidence": [
+        "fixture-test"
+      ],
+      "evidence": [
+        "evidence/local/fixture-producer.json"
+      ],
+      "unknowns": []
+    },
+    {
+      "id": "save.failed",
+      "path": "Failed write preserves prior save and unrelated temporary file",
+      "profile": "original",
+      "target": "host-comparison",
+      "required": true,
+      "implementation": "implemented",
+      "verification": "passed",
+      "required_evidence": [
+        "fixture-test"
+      ],
+      "evidence": [
+        "evidence/local/fixture-producer.json"
+      ],
+      "unknowns": []
+    },
+    {
+      "id": "undo.capacity",
+      "path": "Cold load retains all 128 bounded undo steps",
+      "profile": "original",
+      "target": "host-comparison",
+      "required": true,
+      "implementation": "implemented",
+      "verification": "passed",
+      "required_evidence": [
+        "fixture-test"
+      ],
+      "evidence": [
+        "evidence/local/fixture-producer.json"
+      ],
+      "unknowns": []
+    },
+    {
+      "id": "input.invalid",
+      "path": "Invalid commands preserve state without crashing",
+      "profile": "original",
+      "target": "host-comparison",
+      "required": true,
+      "implementation": "implemented",
+      "verification": "passed",
+      "required_evidence": [
+        "fixture-test"
+      ],
+      "evidence": [
+        "evidence/local/fixture-producer.json"
+      ],
+      "unknowns": []
+    },
+    {
+      "id": "browser.campaign",
+      "path": "Browser: six campaign routes through keyboard and buttons",
+      "profile": "original",
+      "target": "browser",
+      "required": true,
+      "implementation": "implemented",
+      "verification": "passed",
+      "required_evidence": [
+        "automated-gameplay"
+      ],
+      "evidence": [
+        "evidence/local/browser-producer.json"
+      ],
+      "unknowns": []
+    },
+    {
+      "id": "browser.storage",
+      "path": "Browser: save/load, undo, quota denial and damaged-save rejection",
+      "profile": "original",
+      "target": "browser",
+      "required": true,
+      "implementation": "implemented",
+      "verification": "untested",
+      "required_evidence": [
+        "fixture-test"
+      ],
+      "evidence": [],
+      "unknowns": []
+    },
+    {
+      "id": "browser.touch-emulation",
+      "path": "Touch emulation: direction button works without horizontal overflow",
+      "profile": "original",
+      "target": "browser",
+      "required": true,
+      "implementation": "implemented",
+      "verification": "untested",
+      "required_evidence": [
+        "fixture-test"
+      ],
+      "evidence": [],
+      "unknowns": []
+    },
+    {
+      "id": "audio.listening",
+      "path": "Listen to start/switch/completion, mute, repeated playback",
+      "profile": "original",
+      "target": "browser",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "target-device"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "No qualifying current evidence has been collected."
+      ]
+    },
+    {
+      "id": "device.desktop",
+      "path": "Actual desktop Chrome/macOS acceptance of presentation, controls and audio",
+      "profile": "original",
+      "target": "browser",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "No qualifying current evidence has been collected."
+      ]
+    },
+    {
+      "id": "device.iphone",
+      "path": "Actual iPhone/Safari: touch, storage, import/export and audio",
+      "profile": "original",
+      "target": "iphone",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "No qualifying current evidence has been collected."
+      ]
+    },
+    {
+      "id": "recovery.blind",
+      "path": "Withheld-source Linux/Ghidra recovery produces independent buildable C",
+      "profile": "original",
+      "target": "linux-x86-64",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "source-inspection",
+        "fixture-test",
+        "automated-gameplay",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "No qualifying current evidence has been collected."
+      ]
+    }
+  ]
+}

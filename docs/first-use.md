@@ -6,11 +6,18 @@ This guide assumes you can inspect a project and run its development tools. You 
 
 ## 1. Install the complete skill
 
-From a local checkout or extracted project archive, copy the entire directory:
+From a local checkout or extracted GitHub source archive, copy the entire directory:
 
 ```sh
 mkdir -p ~/.agents/skills
 cp -R skills/port-any-game-anywhere ~/.agents/skills/port-any-game-anywhere
+```
+
+For the generated skill ZIP, extract it first. Its top-level folder is already the skill:
+
+```sh
+mkdir -p ~/.agents/skills
+cp -R port-any-game-anywhere ~/.agents/skills/port-any-game-anywhere
 ```
 
 Move an existing destination aside first. Copying only `SKILL.md` omits the references, templates, and scripts. Keep the source revision or archive version with the project’s evaluation record.
@@ -66,6 +73,7 @@ Prepare a manifest from the installed `templates/run-manifest.json`. Give it an 
 Run the check with a new evidence path:
 
 ```sh
+mkdir -p port/evidence
 python3 ~/.agents/skills/port-any-game-anywhere/scripts/record_run.py port/run-manifest.json --output port/evidence/run-001.json
 ```
 

@@ -1,0 +1,9 @@
+{
+  "name": "switchboard-port-example",
+  "version": "0.1.0-dev",
+  "private": true,
+  "type": "module",
+  "description": "Original source-authored example, not a source recovery result",
+  "scripts": { "build": "tsc", "test": "node --test tests/engine.test.mjs" },
+  "devDependencies": { "typescript": "7.0.2" }
+}

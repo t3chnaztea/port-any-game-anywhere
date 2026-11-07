@@ -8,16 +8,18 @@ A port can boot, display a level, and move a character while its saves, other mo
 
 “Anywhere” describes the ambition. Feasibility still depends on lawful source or binary access, available tools, target limits, time, and access to the devices you intend to support. This skill cannot automatically port every game. It cannot turn an emulator pass into console acceptance.
 
-**Status: development snapshot.** The skill, templates, and worked examples are being prepared for evaluation. The recovery trial, external source-led pilot, live Codex evaluation, and target-device checks are pending. There is no public beta acceptance claim. See [the release gates](STATUS.md).
+**Status: unreleased development build.** The skill, evidence helpers, research, and examples are implemented. A packaged Codex intake smoke check passed. Switchboard has source-authored C and browser implementations. The pinned Fifteen browser build has three checked routes. Blinded recovery, paired agent evaluations, physical-device checks, and final acceptance remain open. See [the current state](STATUS.md).
 
 ## Start with a port plan
 
-Use a local checkout or an extracted project archive. Copy the entire skill directory, including its references, templates, and scripts:
+From a local checkout or a GitHub source archive, copy the entire skill directory:
 
 ```sh
 mkdir -p ~/.agents/skills
 cp -R skills/port-any-game-anywhere ~/.agents/skills/port-any-game-anywhere
 ```
+
+The generated skill ZIP has a different layout. After extracting it, copy `port-any-game-anywhere/` directly to that destination. Keep its references, templates, scripts, and metadata together.
 
 If that destination already exists, move the old copy aside before copying. Open Codex in a separate working copy of the game project. Invoke the skill explicitly:
 
@@ -67,12 +69,12 @@ Read the diagram from left to right. Failures return to diagnosis and a bounded 
 
 [Sonic CD Saturn / CD++](docs/case-studies/sonic-cd.md) is the main process case study. Its records show why implemented features, historical test passes, current validation, and console acceptance need separate labels. The full game remains unaccepted in the reviewed snapshot.
 
-Two redistributable examples are planned for evaluation:
+Two redistributable examples support evaluation:
 
-- **Switchboard:** an original six-board puzzle. Recover a stripped C executable into buildable C, then port it to a TypeScript browser game. The original source stays hidden during the recovery trial.
+- **Switchboard:** an original six-board puzzle with source-authored C and TypeScript implementations. Its future blinded trial must withhold source while an agent recovers buildable C. The current implementation does not count as recovery.
 - **Fifteen:** reproduce an existing source-led browser port from Simon Tatham’s puzzle collection. The existing upstream web port is disclosed. This checks onboarding, inventory, builds, and evidence. It is not a claim to have invented a new port.
 
-Expected outputs are specifications until a completed run supplies evidence. See [the example directory](examples/) and [evaluation material](evals/).
+Switchboard has ten cross-language fixture tests and six browser checks. Fifteen has a pinned build and three browser route checks. These results have explicit limits. Expected outputs remain specifications until their own run supplies evidence. See [the example directory](examples/), [evaluation material](evaluations/), and [validation commands](docs/validation.md).
 
 ## Designed for bounded agent work
 
@@ -84,6 +86,7 @@ The skill uses explicit invocation. It does not install a decompiler, create bac
 
 - [First use](docs/first-use.md)
 - [Compatibility and requirements](docs/compatibility.md)
+- [Validation commands and limits](docs/validation.md)
 - [Research and source dates](docs/research.md)
 - [Sonic CD case study](docs/case-studies/sonic-cd.md)
 - [Contributing](CONTRIBUTING.md)

@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "checks": [
+    "normal UI completion, save/load and undo",
+    "normal UI: all six campaign routes and final transition",
+    "normal UI: adjacent pointer action and export/import with undo",
+    "fixture: quota error preserves previous save",
+    "fixture: damaged browser save rejected",
+    "touch emulation: normal button input and no horizontal overflow"
+  ],
+  "browser": "156.0.8078.80",
+  "evidence_class": "browser automation and controlled fixtures",
+  "limitations": [
+    "touch emulation is not an actual iPhone",
+    "audio was not reviewed by a listener",
+    "not a blinded recovery result"
+  ],
+  "observation_date": "2026-11-07",
+  "currentness": "Historical observation. Regenerate a bound run record before reuse."
+}

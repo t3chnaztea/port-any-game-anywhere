@@ -1,0 +1,762 @@
+{
+  "artifacts": [],
+  "child_pid": 81468,
+  "claim_ids": [
+    "helpers.negative",
+    "example.source"
+  ],
+  "command": {
+    "argv": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "cwd": "..",
+    "output_limit_bytes": 1048576,
+    "timeout_seconds": 60
+  },
+  "created_at": "2026-11-07T22:19:24.517136+00:00",
+  "errors": [],
+  "evidence_class": "fixture-test",
+  "finished_at": "2026-11-07T22:19:30.456946+00:00",
+  "id": "implementation-unit-checks-producer-pinned",
+  "identity_after": {
+    "environment": {
+      "LANG": {
+        "present": true,
+        "sha256": "99fed2d548c2eb1022f4067f97fe838a2c3ea60ee0e0f53086788505c3ababad"
+      },
+      "LC_ALL": {
+        "present": true,
+        "sha256": "99fed2d548c2eb1022f4067f97fe838a2c3ea60ee0e0f53086788505c3ababad"
+      },
+      "NODE_OPTIONS": {
+        "present": false,
+        "sha256": null
+      },
+      "PATH": {
+        "present": true,
+        "sha256": "9dde8cabfb03c9c09c396684cb18b0f865d4d3512559aa8c1624a47ff95ce946"
+      },
+      "PYTHONPATH": {
+        "present": false,
+        "sha256": null
+      },
+      "TMPDIR": {
+        "present": true,
+        "sha256": "8f8a206e2c26bcf8fd35a6579d6148a15f5e5a18e1397d4c5450f04b918540a6"
+      }
+    },
+    "files": [
+      {
+        "exists": true,
+        "path": "../implementation-producer.manifest.json",
+        "role": "manifest",
+        "sha256": "2789c9ddb92fb5712bfa9f1e262f581b0ed5533ed24d0a873c1d6636248b0e9b",
+        "size": 4594
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/SKILL.md",
+        "role": "source",
+        "sha256": "b411a175f2b0781e3b3f2407dd908f7b277c4e856f29b9822eb234d3b7abdd4a",
+        "size": 11555
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/adapters/console.md",
+        "role": "source",
+        "sha256": "e044e793e82d12e80a06ea214bf244a30e6130feb8cf27f2f4628ab4a8166488",
+        "size": 1603
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/adapters/ghidra-linux-x86.md",
+        "role": "source",
+        "sha256": "b1c47c48ab8f38862b10a144d86e79661d5757dab57c5dba23b8635f0b517db7",
+        "size": 2059
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/adapters/native-to-browser.md",
+        "role": "source",
+        "sha256": "c2183191d846c722cfd8c40cb33edcfdc3a97a47960783d429a05b58908795d7",
+        "size": 1786
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/agents/openai.yaml",
+        "role": "source",
+        "sha256": "c749ed9b89e0619d2f8037e7d902cb1bfed173e03b998c61cd3c1208d0bf0bac",
+        "size": 297
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/references/INDEX.md",
+        "role": "source",
+        "sha256": "09b4c8ca83c08fb6c2183e8b67d7b08d04a8c2848cccf6129d9ce3d4d8ed8045",
+        "size": 1103
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/references/defect-loop.md",
+        "role": "source",
+        "sha256": "c9eda263ad7dcd1129e2767bce679f3d0600a130fabc09e87ce1a99ac0960724",
+        "size": 2598
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/references/efficient-agent-work.md",
+        "role": "source",
+        "sha256": "01b442e4a0307e0924f3766a2e4e8b5e688a766b42ebdab513c8db4600e4d6e8",
+        "size": 3592
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/references/intake-feasibility.md",
+        "role": "source",
+        "sha256": "52538772b81674d68adac7672cfd04b03658570d5265f43201a4dfcad2cfbe46",
+        "size": 2412
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/references/inventory-fidelity.md",
+        "role": "source",
+        "sha256": "5470a46c17b64515fecc81cb46deba923c9f43133160e54f6780c1ad06c5dee3",
+        "size": 3127
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/references/record-format.md",
+        "role": "source",
+        "sha256": "b54e73883bdc8a1b3e2e314f001b7ad6f18d2f87557c754dabf74aa69ec3b77e",
+        "size": 7936
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/references/source-recovery.md",
+        "role": "source",
+        "sha256": "2b3dd791ea4220cdc0f00468b65e1b362ba562e03dd29989a69cd46f3deed29a",
+        "size": 3384
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/references/verification.md",
+        "role": "source",
+        "sha256": "b6107bef787ad57efce04de0f085a6e566634104d0fcbb2fc883254015d18b2f",
+        "size": 3615
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/scripts/check_port.py",
+        "role": "source",
+        "sha256": "16d01cce5c48d50ddd09f997307d6fa20c9140faf06ffff2ffbef21ee5a0af3a",
+        "size": 14002
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/scripts/record_run.py",
+        "role": "source",
+        "sha256": "dbab1fe1c963f2b61bc06450d77848124fa4186bab19bc49423238484b3d0776",
+        "size": 17492
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/templates/bug.md",
+        "role": "source",
+        "sha256": "7a3464f3e0ce3f1e8bdb8a892bbb2d1d29b301d9604f7537ec85f1477c6e299c",
+        "size": 1634
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/templates/completion-ledger.json",
+        "role": "source",
+        "sha256": "fe81045b05f71417b2382c1239cdfc86c7ab6559ea8a71587f3370271d0fe219",
+        "size": 1268
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/templates/coverage.md",
+        "role": "source",
+        "sha256": "06489a0fec2eb95e52257e95958fbcf87b7df837ae7f696b4c3d648aa98962f3",
+        "size": 1694
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/templates/handoff.md",
+        "role": "source",
+        "sha256": "d854fd04c8a08fab8f441d5f6982c013e1989024132836f4a1afa0b657b0d83c",
+        "size": 1054
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/templates/manual-evidence.json",
+        "role": "source",
+        "sha256": "77aba004868efd8f0c2514aa04be3664c2dbfb91c817de44fc0c40108630768f",
+        "size": 1187
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/templates/port-plan.md",
+        "role": "source",
+        "sha256": "35886ed932a8227aea77cbc6cebe0bee4b2fb0643fb512668e2da0b1cececf39",
+        "size": 2794
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/templates/release-audit.md",
+        "role": "source",
+        "sha256": "d10e79741877133ddb456b99a241139197b13b4ecc33afbdb5cb6f2428dcf6c8",
+        "size": 1587
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/templates/run-manifest.json",
+        "role": "source",
+        "sha256": "d3db112bcc9dbb5e9df3feeaca561bd909ad340a8a3c4e5862b3f2cd20999730",
+        "size": 789
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/templates/source-map.md",
+        "role": "source",
+        "sha256": "88b43a33674e42392ea17dbb14b08b05aea53bdfd8ea5bc66a22ca119b7a1a50",
+        "size": 1460
+      },
+      {
+        "exists": true,
+        "path": "../../tests/test_check_port.py",
+        "role": "fixture",
+        "sha256": "a9f4e5b60b7f4601fe5b99f0c218c52361aa066a9893da099b3c8f18c375067d",
+        "size": 12924
+      },
+      {
+        "exists": true,
+        "path": "../../tests/test_record_run.py",
+        "role": "fixture",
+        "sha256": "2395ecf6fad2da551c7a9183513d4864ff8527807832add82ecbc4fec05464c8",
+        "size": 12606
+      },
+      {
+        "exists": true,
+        "path": "../../tests/test_release.py",
+        "role": "fixture",
+        "sha256": "d2d7f8e25993aae30422be79981e5567f2eb6c5337d10172ca8dca3ef2a9ab98",
+        "size": 3261
+      },
+      {
+        "exists": true,
+        "path": "../../tests/test_switchboard.py",
+        "role": "fixture",
+        "sha256": "c545c8c05f4d93ff378a1077bc68f6dd0309be78ddd1379ccd0a0d0f625091c8",
+        "size": 8874
+      },
+      {
+        "exists": true,
+        "path": "../../tools/build_release.py",
+        "role": "source",
+        "sha256": "1d5f16dd3d8f9a96a4ea329c3f82bcd9a36139973a0816e0d8e1cb910f467ad5",
+        "size": 4388
+      },
+      {
+        "exists": true,
+        "path": "../../examples/recovery-puzzle/reference/switchboard.c",
+        "role": "source",
+        "sha256": "763c99c711a22056404d2fb597ff45412a41e54ea6b0aacb487573734b2da20e",
+        "size": 8534
+      },
+      {
+        "exists": true,
+        "path": "../../examples/recovery-puzzle/web/engine.ts",
+        "role": "source",
+        "sha256": "dd23dfa5cb453cec4d04137eeea45c046ee7aa8ea4acb41df84e864ab4a80166",
+        "size": 5630
+      },
+      {
+        "exists": true,
+        "path": "../../examples/recovery-puzzle/web/cli.ts",
+        "role": "source",
+        "sha256": "a49afdb92fc0436cf73bb0668b29fed3a73671a571843e3d6381a2f2f6e5e65f",
+        "size": 1198
+      },
+      {
+        "exists": true,
+        "path": "../../VERSION",
+        "role": "config",
+        "sha256": "c2ef39e09593cca70be98a0fb0ab435b53e2eb3c3d4e812cd7d43794eafa7728",
+        "size": 10
+      },
+      {
+        "exists": true,
+        "path": "../../LICENSE",
+        "role": "config",
+        "sha256": "1d5e5d533428f0d6122bb5466de15d24a6d457078441a66504098e55918af48d",
+        "size": 1092
+      }
+    ],
+    "invoked_executable": {
+      "exists": true,
+      "path": "../../../../../../opt/homebrew/bin/python3",
+      "sha256": "6cc907e4a022fefc843bcd93954eaf5a2cbfc77a095640bfadeeed96154190c5",
+      "size": 34640
+    },
+    "recording_tool": {
+      "exists": true,
+      "id": "record_run.py",
+      "sha256": "dbab1fe1c963f2b61bc06450d77848124fa4186bab19bc49423238484b3d0776",
+      "size": 17492
+    },
+    "tools": [
+      {
+        "file": {
+          "exists": true,
+          "path": "../../../../../../opt/homebrew/bin/python3",
+          "sha256": "6cc907e4a022fefc843bcd93954eaf5a2cbfc77a095640bfadeeed96154190c5",
+          "size": 34640
+        },
+        "flags": [],
+        "requested": "python3",
+        "version_argv": [
+          "python3",
+          "--version"
+        ]
+      },
+      {
+        "file": {
+          "exists": true,
+          "path": "../../../../../../usr/bin/clang",
+          "sha256": "34129c71a01a74f7f3b2443521519b2e5447553fa187f5fcafaaf8c42cc192e2",
+          "size": 200560
+        },
+        "flags": [
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror"
+        ],
+        "requested": "clang",
+        "version_argv": [
+          "clang",
+          "--version"
+        ]
+      },
+      {
+        "file": {
+          "exists": true,
+          "path": "../../../../../../opt/homebrew/bin/node",
+          "sha256": "64e4f47aef084a288c443ebe9a0091a34acba03ad176fb612b6e7d90784ff93d",
+          "size": 132848
+        },
+        "flags": [],
+        "requested": "node",
+        "version_argv": [
+          "node",
+          "--version"
+        ]
+      }
+    ]
+  },
+  "identity_before": {
+    "environment": {
+      "LANG": {
+        "present": true,
+        "sha256": "99fed2d548c2eb1022f4067f97fe838a2c3ea60ee0e0f53086788505c3ababad"
+      },
+      "LC_ALL": {
+        "present": true,
+        "sha256": "99fed2d548c2eb1022f4067f97fe838a2c3ea60ee0e0f53086788505c3ababad"
+      },
+      "NODE_OPTIONS": {
+        "present": false,
+        "sha256": null
+      },
+      "PATH": {
+        "present": true,
+        "sha256": "9dde8cabfb03c9c09c396684cb18b0f865d4d3512559aa8c1624a47ff95ce946"
+      },
+      "PYTHONPATH": {
+        "present": false,
+        "sha256": null
+      },
+      "TMPDIR": {
+        "present": true,
+        "sha256": "8f8a206e2c26bcf8fd35a6579d6148a15f5e5a18e1397d4c5450f04b918540a6"
+      }
+    },
+    "files": [
+      {
+        "exists": true,
+        "path": "../implementation-producer.manifest.json",
+        "role": "manifest",
+        "sha256": "2789c9ddb92fb5712bfa9f1e262f581b0ed5533ed24d0a873c1d6636248b0e9b",
+        "size": 4594
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/SKILL.md",
+        "role": "source",
+        "sha256": "b411a175f2b0781e3b3f2407dd908f7b277c4e856f29b9822eb234d3b7abdd4a",
+        "size": 11555
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/adapters/console.md",
+        "role": "source",
+        "sha256": "e044e793e82d12e80a06ea214bf244a30e6130feb8cf27f2f4628ab4a8166488",
+        "size": 1603
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/adapters/ghidra-linux-x86.md",
+        "role": "source",
+        "sha256": "b1c47c48ab8f38862b10a144d86e79661d5757dab57c5dba23b8635f0b517db7",
+        "size": 2059
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/adapters/native-to-browser.md",
+        "role": "source",
+        "sha256": "c2183191d846c722cfd8c40cb33edcfdc3a97a47960783d429a05b58908795d7",
+        "size": 1786
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/agents/openai.yaml",
+        "role": "source",
+        "sha256": "c749ed9b89e0619d2f8037e7d902cb1bfed173e03b998c61cd3c1208d0bf0bac",
+        "size": 297
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/references/INDEX.md",
+        "role": "source",
+        "sha256": "09b4c8ca83c08fb6c2183e8b67d7b08d04a8c2848cccf6129d9ce3d4d8ed8045",
+        "size": 1103
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/references/defect-loop.md",
+        "role": "source",
+        "sha256": "c9eda263ad7dcd1129e2767bce679f3d0600a130fabc09e87ce1a99ac0960724",
+        "size": 2598
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/references/efficient-agent-work.md",
+        "role": "source",
+        "sha256": "01b442e4a0307e0924f3766a2e4e8b5e688a766b42ebdab513c8db4600e4d6e8",
+        "size": 3592
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/references/intake-feasibility.md",
+        "role": "source",
+        "sha256": "52538772b81674d68adac7672cfd04b03658570d5265f43201a4dfcad2cfbe46",
+        "size": 2412
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/references/inventory-fidelity.md",
+        "role": "source",
+        "sha256": "5470a46c17b64515fecc81cb46deba923c9f43133160e54f6780c1ad06c5dee3",
+        "size": 3127
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/references/record-format.md",
+        "role": "source",
+        "sha256": "b54e73883bdc8a1b3e2e314f001b7ad6f18d2f87557c754dabf74aa69ec3b77e",
+        "size": 7936
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/references/source-recovery.md",
+        "role": "source",
+        "sha256": "2b3dd791ea4220cdc0f00468b65e1b362ba562e03dd29989a69cd46f3deed29a",
+        "size": 3384
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/references/verification.md",
+        "role": "source",
+        "sha256": "b6107bef787ad57efce04de0f085a6e566634104d0fcbb2fc883254015d18b2f",
+        "size": 3615
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/scripts/check_port.py",
+        "role": "source",
+        "sha256": "16d01cce5c48d50ddd09f997307d6fa20c9140faf06ffff2ffbef21ee5a0af3a",
+        "size": 14002
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/scripts/record_run.py",
+        "role": "source",
+        "sha256": "dbab1fe1c963f2b61bc06450d77848124fa4186bab19bc49423238484b3d0776",
+        "size": 17492
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/templates/bug.md",
+        "role": "source",
+        "sha256": "7a3464f3e0ce3f1e8bdb8a892bbb2d1d29b301d9604f7537ec85f1477c6e299c",
+        "size": 1634
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/templates/completion-ledger.json",
+        "role": "source",
+        "sha256": "fe81045b05f71417b2382c1239cdfc86c7ab6559ea8a71587f3370271d0fe219",
+        "size": 1268
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/templates/coverage.md",
+        "role": "source",
+        "sha256": "06489a0fec2eb95e52257e95958fbcf87b7df837ae7f696b4c3d648aa98962f3",
+        "size": 1694
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/templates/handoff.md",
+        "role": "source",
+        "sha256": "d854fd04c8a08fab8f441d5f6982c013e1989024132836f4a1afa0b657b0d83c",
+        "size": 1054
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/templates/manual-evidence.json",
+        "role": "source",
+        "sha256": "77aba004868efd8f0c2514aa04be3664c2dbfb91c817de44fc0c40108630768f",
+        "size": 1187
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/templates/port-plan.md",
+        "role": "source",
+        "sha256": "35886ed932a8227aea77cbc6cebe0bee4b2fb0643fb512668e2da0b1cececf39",
+        "size": 2794
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/templates/release-audit.md",
+        "role": "source",
+        "sha256": "d10e79741877133ddb456b99a241139197b13b4ecc33afbdb5cb6f2428dcf6c8",
+        "size": 1587
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/templates/run-manifest.json",
+        "role": "source",
+        "sha256": "d3db112bcc9dbb5e9df3feeaca561bd909ad340a8a3c4e5862b3f2cd20999730",
+        "size": 789
+      },
+      {
+        "exists": true,
+        "path": "../../skills/port-any-game-anywhere/templates/source-map.md",
+        "role": "source",
+        "sha256": "88b43a33674e42392ea17dbb14b08b05aea53bdfd8ea5bc66a22ca119b7a1a50",
+        "size": 1460
+      },
+      {
+        "exists": true,
+        "path": "../../tests/test_check_port.py",
+        "role": "fixture",
+        "sha256": "a9f4e5b60b7f4601fe5b99f0c218c52361aa066a9893da099b3c8f18c375067d",
+        "size": 12924
+      },
+      {
+        "exists": true,
+        "path": "../../tests/test_record_run.py",
+        "role": "fixture",
+        "sha256": "2395ecf6fad2da551c7a9183513d4864ff8527807832add82ecbc4fec05464c8",
+        "size": 12606
+      },
+      {
+        "exists": true,
+        "path": "../../tests/test_release.py",
+        "role": "fixture",
+        "sha256": "d2d7f8e25993aae30422be79981e5567f2eb6c5337d10172ca8dca3ef2a9ab98",
+        "size": 3261
+      },
+      {
+        "exists": true,
+        "path": "../../tests/test_switchboard.py",
+        "role": "fixture",
+        "sha256": "c545c8c05f4d93ff378a1077bc68f6dd0309be78ddd1379ccd0a0d0f625091c8",
+        "size": 8874
+      },
+      {
+        "exists": true,
+        "path": "../../tools/build_release.py",
+        "role": "source",
+        "sha256": "1d5f16dd3d8f9a96a4ea329c3f82bcd9a36139973a0816e0d8e1cb910f467ad5",
+        "size": 4388
+      },
+      {
+        "exists": true,
+        "path": "../../examples/recovery-puzzle/reference/switchboard.c",
+        "role": "source",
+        "sha256": "763c99c711a22056404d2fb597ff45412a41e54ea6b0aacb487573734b2da20e",
+        "size": 8534
+      },
+      {
+        "exists": true,
+        "path": "../../examples/recovery-puzzle/web/engine.ts",
+        "role": "source",
+        "sha256": "dd23dfa5cb453cec4d04137eeea45c046ee7aa8ea4acb41df84e864ab4a80166",
+        "size": 5630
+      },
+      {
+        "exists": true,
+        "path": "../../examples/recovery-puzzle/web/cli.ts",
+        "role": "source",
+        "sha256": "a49afdb92fc0436cf73bb0668b29fed3a73671a571843e3d6381a2f2f6e5e65f",
+        "size": 1198
+      },
+      {
+        "exists": true,
+        "path": "../../VERSION",
+        "role": "config",
+        "sha256": "c2ef39e09593cca70be98a0fb0ab435b53e2eb3c3d4e812cd7d43794eafa7728",
+        "size": 10
+      },
+      {
+        "exists": true,
+        "path": "../../LICENSE",
+        "role": "config",
+        "sha256": "1d5e5d533428f0d6122bb5466de15d24a6d457078441a66504098e55918af48d",
+        "size": 1092
+      }
+    ],
+    "invoked_executable": {
+      "exists": true,
+      "path": "../../../../../../opt/homebrew/bin/python3",
+      "sha256": "6cc907e4a022fefc843bcd93954eaf5a2cbfc77a095640bfadeeed96154190c5",
+      "size": 34640
+    },
+    "recording_tool": {
+      "exists": true,
+      "id": "record_run.py",
+      "sha256": "dbab1fe1c963f2b61bc06450d77848124fa4186bab19bc49423238484b3d0776",
+      "size": 17492
+    },
+    "tools": [
+      {
+        "file": {
+          "exists": true,
+          "path": "../../../../../../opt/homebrew/bin/python3",
+          "sha256": "6cc907e4a022fefc843bcd93954eaf5a2cbfc77a095640bfadeeed96154190c5",
+          "size": 34640
+        },
+        "flags": [],
+        "requested": "python3",
+        "version_argv": [
+          "python3",
+          "--version"
+        ]
+      },
+      {
+        "file": {
+          "exists": true,
+          "path": "../../../../../../usr/bin/clang",
+          "sha256": "34129c71a01a74f7f3b2443521519b2e5447553fa187f5fcafaaf8c42cc192e2",
+          "size": 200560
+        },
+        "flags": [
+          "-std=c11",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Werror"
+        ],
+        "requested": "clang",
+        "version_argv": [
+          "clang",
+          "--version"
+        ]
+      },
+      {
+        "file": {
+          "exists": true,
+          "path": "../../../../../../opt/homebrew/bin/node",
+          "sha256": "64e4f47aef084a288c443ebe9a0091a34acba03ad176fb612b6e7d90784ff93d",
+          "size": 132848
+        },
+        "flags": [],
+        "requested": "node",
+        "version_argv": [
+          "node",
+          "--version"
+        ]
+      }
+    ]
+  },
+  "log": {
+    "exists": true,
+    "path": "unit-checks-producer.json.log",
+    "sha256": "4816124046f674486b11cbe4a94deabd4617374349d5442465b3bc2c5a0adcc3",
+    "size": 7350
+  },
+  "manifest_path": "../implementation-producer.manifest.json",
+  "outcome": {
+    "bytes": 7350,
+    "exit_code": 0,
+    "signal": null,
+    "termination_reason": null,
+    "truncated": false
+  },
+  "profile": "original",
+  "record_type": "machine",
+  "schema_version": 1,
+  "started_at": "2026-11-07T22:19:24.615001+00:00",
+  "status": "passed",
+  "target": "skill-release",
+  "tool_versions": [
+    {
+      "argv": [
+        "python3",
+        "--version"
+      ],
+      "bytes": 14,
+      "exit_code": 0,
+      "output": "Python 3.15.2\n",
+      "path": "python3",
+      "sha256": "b01b5da7ac6a0ecc5ff1aee7998c4ad10df616dc53585c5e44d3c6b916cfaf11",
+      "termination_reason": null,
+      "truncated": false
+    },
+    {
+      "argv": [
+        "clang",
+        "--version"
+      ],
+      "bytes": 200,
+      "exit_code": 0,
+      "output": "Apple clang version 21.0.0 (clang-2100.4.1.1)\nTarget: arm64-apple-darwin27.0.0\nThread model: posix\nInstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin\n",
+      "path": "clang",
+      "sha256": "b8a2569d699eec50baaf1719096d0801d16fb28fbcb2df7ffd0a07cd26d9fd47",
+      "termination_reason": null,
+      "truncated": false
+    },
+    {
+      "argv": [
+        "node",
+        "--version"
+      ],
+      "bytes": 9,
+      "exit_code": 0,
+      "output": "v26.13.0\n",
+      "path": "node",
+      "sha256": "d4b8a831ea4925f1c54be7746ec0b846cb04bbc35295b64ccdb2101bfcf5d70c",
+      "termination_reason": null,
+      "truncated": false
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "reference_kind": "Original Switchroom puzzle source and supplied behavior specification. Source-inspection only. Browser rewrite appears feasible; game.py is incomplete. Declared licenses: MIT source, CC0 assets.",
+  "release_ready": false,
+  "known_modes": [
+    "Campaign: completion advances the board; board 3 leads to credits.",
+    "Practice: any board can be selected; completion must return to board selection. Source currently raises NotImplementedError."
+  ],
+  "next_milestone": "Implement a browser practice slice: select a board, complete it, return to board selection. Preserve the supplied reference behavior as the baseline. Use this transition to establish the missing gameplay contract before expanding.",
+  "acceptance_gates": [
+    "Boot reaches title.",
+    "Campaign completion advances boards and reaches credits after board 3.",
+    "Practice permits selection of every board and returns to selection after completion.",
+    "Save and restart restore board, move count, and undo history. Source persistence is currently unimplemented.",
+    "Keyboard and touch complete required routes on declared physical browser targets; record device, OS, browser, and controls.",
+    "Verify original graphics and audio against supplied reference material; define fidelity and performance criteria before testing.",
+    "Release requires evidence for all four required scenarios. No execution or device results were obtained in this intake."
+  ],
+  "unknowns": [
+    "Puzzle rules, board data, move handling, undo semantics, and completion detection are absent from inspected source.",
+    "Exact source revision and reference asset identities are unspecified.",
+    "Generated graphics and audio availability and expected presentation are unspecified.",
+    "Save format, storage failure behavior, and corrupt-save recovery are undefined.",
+    "Supported devices, browser versions, performance budgets, and test operator are unspecified."
+  ]
+}

@@ -1,0 +1,391 @@
+{
+  "artifacts": [
+    {
+      "exists": true,
+      "path": "../../../../.work/browser/report.json",
+      "sha256": "3ec3827cc08dfb62e0ce938785731eef9050c771a0aec61279aebb0630d46444",
+      "size": 640
+    },
+    {
+      "exists": true,
+      "path": "../../../../.work/browser/desktop.png",
+      "sha256": "7eebff742ce63082008fed247aab513b5ca3e6b23d2ba6f49fe7552614f56f62",
+      "size": 107358
+    },
+    {
+      "exists": true,
+      "path": "../../../../.work/browser/touch-emulation.png",
+      "sha256": "fe2c8301a8c8946e87df27bc40fe5cd61fa6fe1a8655d515b1b622b0c4816e20",
+      "size": 75455
+    },
+    {
+      "exists": true,
+      "path": "../../../../.work/browser/exported-save.txt",
+      "sha256": "f1ef96b53f4b657219d8546c4333476cb0cbe31ea3de337613aeefc211208af2",
+      "size": 47
+    }
+  ],
+  "child_pid": 80063,
+  "claim_ids": [
+    "browser.campaign"
+  ],
+  "command": {
+    "argv": [
+      ".work/venv/bin/python",
+      "tools/check_browser.py"
+    ],
+    "cwd": "../../..",
+    "output_limit_bytes": 1048576,
+    "timeout_seconds": 60
+  },
+  "created_at": "2026-11-07T22:16:51.736750+00:00",
+  "errors": [],
+  "evidence_class": "automated-gameplay",
+  "finished_at": "2026-11-07T22:16:54.225345+00:00",
+  "id": "switchboard-browser-producer-pinned",
+  "identity_after": {
+    "environment": {
+      "LANG": {
+        "present": true,
+        "sha256": "99fed2d548c2eb1022f4067f97fe838a2c3ea60ee0e0f53086788505c3ababad"
+      },
+      "LC_ALL": {
+        "present": true,
+        "sha256": "99fed2d548c2eb1022f4067f97fe838a2c3ea60ee0e0f53086788505c3ababad"
+      },
+      "PATH": {
+        "present": true,
+        "sha256": "9dde8cabfb03c9c09c396684cb18b0f865d4d3512559aa8c1624a47ff95ce946"
+      },
+      "PLAYWRIGHT_BROWSERS_PATH": {
+        "present": false,
+        "sha256": null
+      },
+      "PYTHONPATH": {
+        "present": false,
+        "sha256": null
+      }
+    },
+    "files": [
+      {
+        "exists": true,
+        "path": "../browser-producer.manifest.json",
+        "role": "manifest",
+        "sha256": "5022a0958a9ba21f4facfec94a43a6401b055a008482a879566534ce21467f33",
+        "size": 2186
+      },
+      {
+        "exists": true,
+        "path": "../../web/engine.ts",
+        "role": "source",
+        "sha256": "dd23dfa5cb453cec4d04137eeea45c046ee7aa8ea4acb41df84e864ab4a80166",
+        "size": 5630
+      },
+      {
+        "exists": true,
+        "path": "../../web/app.ts",
+        "role": "source",
+        "sha256": "7d26a5d714692699010b4594b7416c0566bd2ff899b912cfe2196b7848635f8b",
+        "size": 5341
+      },
+      {
+        "exists": true,
+        "path": "../../CONTRACT.md",
+        "role": "reference",
+        "sha256": "6b05f94abe330c4ab5f4abd4070e8371905061d1a947f0776fe278c8141cd1a4",
+        "size": 4205
+      },
+      {
+        "exists": true,
+        "path": "../../../../tools/check_browser.py",
+        "role": "fixture",
+        "sha256": "591ee3e255b5f8ac60b47556223e30bf03385f7f2f6616c6258594000ce0002f",
+        "size": 7649
+      },
+      {
+        "exists": true,
+        "path": "../../routes.json",
+        "role": "fixture",
+        "sha256": "b95a00d4e2eb9f374e803d7ef73e47b5fdf061bbf79c170358b1aef5aee5752e",
+        "size": 1344
+      },
+      {
+        "exists": true,
+        "path": "../../../../requirements-dev.txt",
+        "role": "config",
+        "sha256": "38f7d9db5d77d69fe2341dd4323c22c727f5f227c9223a60bda85aa8220a25e7",
+        "size": 111
+      },
+      {
+        "exists": true,
+        "path": "../../../../.work/switchboard/site/app.js",
+        "role": "asset",
+        "sha256": "148c07d5924232bdf341767d18301a9d4c48682514848a15705aa2fb1d621290",
+        "size": 6019
+      },
+      {
+        "exists": true,
+        "path": "../../../../.work/switchboard/site/engine.js",
+        "role": "asset",
+        "sha256": "c8afacb49c5a200a71bdae9de2d44249351d4b609f1bd32c547da7cdf869dcb5",
+        "size": 6912
+      },
+      {
+        "exists": true,
+        "path": "../../../../.work/switchboard/site/index.html",
+        "role": "asset",
+        "sha256": "dd7d935694a8fd09116ff86ed6226dd7e4f69c881ed76d5926212ad96237e9a7",
+        "size": 3485
+      },
+      {
+        "exists": true,
+        "path": "../../../../.work/switchboard/site/style.css",
+        "role": "asset",
+        "sha256": "026581d058a45eaa65ef5f1a94f0c27b4c31576a4b97bd1c864823e8de49e31c",
+        "size": 4855
+      }
+    ],
+    "invoked_executable": {
+      "exists": true,
+      "path": "../../../../.work/venv/bin/python",
+      "sha256": "6cc907e4a022fefc843bcd93954eaf5a2cbfc77a095640bfadeeed96154190c5",
+      "size": 34640
+    },
+    "recording_tool": {
+      "exists": true,
+      "id": "record_run.py",
+      "sha256": "dbab1fe1c963f2b61bc06450d77848124fa4186bab19bc49423238484b3d0776",
+      "size": 17492
+    },
+    "tools": [
+      {
+        "file": {
+          "exists": true,
+          "path": "../../../../.work/venv/bin/python",
+          "sha256": "6cc907e4a022fefc843bcd93954eaf5a2cbfc77a095640bfadeeed96154190c5",
+          "size": 34640
+        },
+        "flags": [],
+        "requested": "../../../.work/venv/bin/python",
+        "version_argv": [
+          "../../../.work/venv/bin/python",
+          "-c",
+          "import sys,importlib.metadata as m;print(sys.version);print(\"playwright\",m.version(\"playwright\"));print(\"greenlet\",m.version(\"greenlet\"));print(\"pyee\",m.version(\"pyee\"))"
+        ]
+      },
+      {
+        "file": {
+          "exists": true,
+          "path": "../../../../../../../../Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+          "sha256": "3f0acaf1e585195596d73ffa1824baa72c3c3ac115b5cfc43d789030a3f23d93",
+          "size": 367696
+        },
+        "flags": [
+          "--headless"
+        ],
+        "requested": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+        "version_argv": [
+          "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+          "--version"
+        ]
+      }
+    ]
+  },
+  "identity_before": {
+    "environment": {
+      "LANG": {
+        "present": true,
+        "sha256": "99fed2d548c2eb1022f4067f97fe838a2c3ea60ee0e0f53086788505c3ababad"
+      },
+      "LC_ALL": {
+        "present": true,
+        "sha256": "99fed2d548c2eb1022f4067f97fe838a2c3ea60ee0e0f53086788505c3ababad"
+      },
+      "PATH": {
+        "present": true,
+        "sha256": "9dde8cabfb03c9c09c396684cb18b0f865d4d3512559aa8c1624a47ff95ce946"
+      },
+      "PLAYWRIGHT_BROWSERS_PATH": {
+        "present": false,
+        "sha256": null
+      },
+      "PYTHONPATH": {
+        "present": false,
+        "sha256": null
+      }
+    },
+    "files": [
+      {
+        "exists": true,
+        "path": "../browser-producer.manifest.json",
+        "role": "manifest",
+        "sha256": "5022a0958a9ba21f4facfec94a43a6401b055a008482a879566534ce21467f33",
+        "size": 2186
+      },
+      {
+        "exists": true,
+        "path": "../../web/engine.ts",
+        "role": "source",
+        "sha256": "dd23dfa5cb453cec4d04137eeea45c046ee7aa8ea4acb41df84e864ab4a80166",
+        "size": 5630
+      },
+      {
+        "exists": true,
+        "path": "../../web/app.ts",
+        "role": "source",
+        "sha256": "7d26a5d714692699010b4594b7416c0566bd2ff899b912cfe2196b7848635f8b",
+        "size": 5341
+      },
+      {
+        "exists": true,
+        "path": "../../CONTRACT.md",
+        "role": "reference",
+        "sha256": "6b05f94abe330c4ab5f4abd4070e8371905061d1a947f0776fe278c8141cd1a4",
+        "size": 4205
+      },
+      {
+        "exists": true,
+        "path": "../../../../tools/check_browser.py",
+        "role": "fixture",
+        "sha256": "591ee3e255b5f8ac60b47556223e30bf03385f7f2f6616c6258594000ce0002f",
+        "size": 7649
+      },
+      {
+        "exists": true,
+        "path": "../../routes.json",
+        "role": "fixture",
+        "sha256": "b95a00d4e2eb9f374e803d7ef73e47b5fdf061bbf79c170358b1aef5aee5752e",
+        "size": 1344
+      },
+      {
+        "exists": true,
+        "path": "../../../../requirements-dev.txt",
+        "role": "config",
+        "sha256": "38f7d9db5d77d69fe2341dd4323c22c727f5f227c9223a60bda85aa8220a25e7",
+        "size": 111
+      },
+      {
+        "exists": true,
+        "path": "../../../../.work/switchboard/site/app.js",
+        "role": "asset",
+        "sha256": "148c07d5924232bdf341767d18301a9d4c48682514848a15705aa2fb1d621290",
+        "size": 6019
+      },
+      {
+        "exists": true,
+        "path": "../../../../.work/switchboard/site/engine.js",
+        "role": "asset",
+        "sha256": "c8afacb49c5a200a71bdae9de2d44249351d4b609f1bd32c547da7cdf869dcb5",
+        "size": 6912
+      },
+      {
+        "exists": true,
+        "path": "../../../../.work/switchboard/site/index.html",
+        "role": "asset",
+        "sha256": "dd7d935694a8fd09116ff86ed6226dd7e4f69c881ed76d5926212ad96237e9a7",
+        "size": 3485
+      },
+      {
+        "exists": true,
+        "path": "../../../../.work/switchboard/site/style.css",
+        "role": "asset",
+        "sha256": "026581d058a45eaa65ef5f1a94f0c27b4c31576a4b97bd1c864823e8de49e31c",
+        "size": 4855
+      }
+    ],
+    "invoked_executable": {
+      "exists": true,
+      "path": "../../../../.work/venv/bin/python",
+      "sha256": "6cc907e4a022fefc843bcd93954eaf5a2cbfc77a095640bfadeeed96154190c5",
+      "size": 34640
+    },
+    "recording_tool": {
+      "exists": true,
+      "id": "record_run.py",
+      "sha256": "dbab1fe1c963f2b61bc06450d77848124fa4186bab19bc49423238484b3d0776",
+      "size": 17492
+    },
+    "tools": [
+      {
+        "file": {
+          "exists": true,
+          "path": "../../../../.work/venv/bin/python",
+          "sha256": "6cc907e4a022fefc843bcd93954eaf5a2cbfc77a095640bfadeeed96154190c5",
+          "size": 34640
+        },
+        "flags": [],
+        "requested": "../../../.work/venv/bin/python",
+        "version_argv": [
+          "../../../.work/venv/bin/python",
+          "-c",
+          "import sys,importlib.metadata as m;print(sys.version);print(\"playwright\",m.version(\"playwright\"));print(\"greenlet\",m.version(\"greenlet\"));print(\"pyee\",m.version(\"pyee\"))"
+        ]
+      },
+      {
+        "file": {
+          "exists": true,
+          "path": "../../../../../../../../Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+          "sha256": "3f0acaf1e585195596d73ffa1824baa72c3c3ac115b5cfc43d789030a3f23d93",
+          "size": 367696
+        },
+        "flags": [
+          "--headless"
+        ],
+        "requested": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+        "version_argv": [
+          "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+          "--version"
+        ]
+      }
+    ]
+  },
+  "log": {
+    "exists": true,
+    "path": "browser-producer.json.log",
+    "sha256": "8e924e431cbfb99a1e4e2ed93c7e35ad8786c18fc346e866ea24cc7c8efa1c22",
+    "size": 71
+  },
+  "manifest_path": "../browser-producer.manifest.json",
+  "outcome": {
+    "bytes": 71,
+    "exit_code": 0,
+    "signal": null,
+    "termination_reason": null,
+    "truncated": false
+  },
+  "profile": "original",
+  "record_type": "machine",
+  "schema_version": 1,
+  "started_at": "2026-11-07T22:16:51.816349+00:00",
+  "status": "passed",
+  "target": "browser",
+  "tool_versions": [
+    {
+      "argv": [
+        "../../../.work/venv/bin/python",
+        "-c",
+        "import sys,importlib.metadata as m;print(sys.version);print(\"playwright\",m.version(\"playwright\"));print(\"greenlet\",m.version(\"greenlet\"));print(\"pyee\",m.version(\"pyee\"))"
+      ],
+      "bytes": 117,
+      "exit_code": 0,
+      "output": "3.15.2 (main, Oct 25 2026, 16:57:51) [Clang 21.0.0 (clang-2100.3.34.2)]\nplaywright 1.64.1\ngreenlet 3.5.6\npyee 14.0.0\n",
+      "path": "../../../.work/venv/bin/python",
+      "sha256": "1a68a499b8168f36fce47336b30df3a3a1cd26ed3148521682350c225fcd874d",
+      "termination_reason": null,
+      "truncated": false
+    },
+    {
+      "argv": [
+        "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+        "--version"
+      ],
+      "bytes": 29,
+      "exit_code": 0,
+      "output": "Google Chrome 156.0.8078.80 \n",
+      "path": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+      "sha256": "4bb32b457f30a1601b3e447915b41b7e723fae18f2af7e78276bcf204456ac4b",
+      "termination_reason": null,
+      "truncated": false
+    }
+  ]
+}

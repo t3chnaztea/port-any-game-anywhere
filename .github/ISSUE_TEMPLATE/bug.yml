@@ -1,0 +1,23 @@
+name: Reproducible defect
+description: Report a wrong decision, broken helper, or unsupported completion claim.
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Skill version and agent/client version
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Smallest reproduction
+      description: Include the prompt or command, available tools, expected result, and observed result. Remove proprietary data and secrets.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and limits
+      description: Link sanitized records. State which checks ran and which remain untested.
+    validations:
+      required: true

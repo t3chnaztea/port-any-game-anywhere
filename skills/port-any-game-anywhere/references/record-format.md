@@ -58,8 +58,9 @@ All listed keys are required. Lists may be empty except `claim_ids` and `argv`.
 Input roles are `source`, `reference`, `asset`, `fixture`, and `config`. List
 every file read by the check, including dependencies, reference data, scripts,
 required assets, and configuration. Enumerate directory contents as files.
-The helper cannot discover undeclared dependencies. It always fingerprints the
-manifest and the invoked executable. Tool paths may be executable names on PATH
+The helper cannot discover undeclared dependencies. It always fingerprints its
+own recording source, the manifest and the invoked executable. A changed recorder
+invalidates old passes. Tool paths may be executable names on PATH
 or file paths. Explicit `version_argv` must start with the declared tool path.
 Tool flags must describe the actual invocation. The manifest fingerprint detects
 later edits to command arguments, flags, configuration, and selected variables.

@@ -1,0 +1,15 @@
+test_all_campaign_boards_through_normal_actions (test_switchboard.SwitchboardTests.test_all_campaign_boards_through_normal_actions) ... ok
+test_checksummed_impossible_states_cannot_advance_past_final_board (test_switchboard.SwitchboardTests.test_checksummed_impossible_states_cannot_advance_past_final_board) ... ok
+test_cold_restore_at_history_capacity (test_switchboard.SwitchboardTests.test_cold_restore_at_history_capacity) ... ok
+test_corrupt_and_truncated_saves_preserve_current_game (test_switchboard.SwitchboardTests.test_corrupt_and_truncated_saves_preserve_current_game) ... ok
+test_every_practice_board_and_undo_completion (test_switchboard.SwitchboardTests.test_every_practice_board_and_undo_completion) ... ok
+test_failed_save_preserves_old_file_and_unrelated_temp (test_switchboard.SwitchboardTests.test_failed_save_preserves_old_file_and_unrelated_temp) ... ok
+test_restart_title_mute_and_invalid_input (test_switchboard.SwitchboardTests.test_restart_title_mute_and_invalid_input) ... ok
+test_save_format_and_cross_language_cold_load_preserve_undo (test_switchboard.SwitchboardTests.test_save_format_and_cross_language_cold_load_preserve_undo) ... ok
+test_seeded_controller_exploration_and_history_bound (test_switchboard.SwitchboardTests.test_seeded_controller_exploration_and_history_bound) ... ok
+test_switch_reversal_walls_and_empty_undo (test_switchboard.SwitchboardTests.test_switch_reversal_walls_and_empty_undo) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 3.106s
+
+OK

@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "checks": [
+    "fixed game ID: keyboard completion, undo and redo",
+    "normal pointer: aligned row moves two tiles",
+    "cold page load: full save including pending redo round-trips byte for byte"
+  ],
+  "evidence_class": "automated-gameplay",
+  "limitations": [
+    "not a native-reference comparison",
+    "not actual iPhone acceptance",
+    "not a full51-claim acceptance"
+  ],
+  "browser": "156.0.8078.80",
+  "artifacts": {
+    "fifteen.html": "58a7b374d88def241aeee9beb9d2b82548af2e185bd4f29807aa23c2a2baa9b1",
+    "fifteen.js": "5307818c6ff394731e07e70318fb22f576f1d6c14b201910824508b40455b9f9",
+    "fifteen.wasm": "fba6dca2f323e0489d7bdfbcb210376afe186a25c3846a161b2601eb394edd97"
+  },
+  "observation_date": "2026-11-07",
+  "currentness": "Historical observation. Regenerate a bound run record before reuse."
+}

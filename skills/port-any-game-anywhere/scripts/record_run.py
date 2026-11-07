@@ -167,14 +167,17 @@ def collect_identity(manifest: dict, manifest_path: Path, record_dir: Path) -> d
     for tool in manifest["tools"]:
         tools.append({"file": file_identity(executable_path(tool["path"], base), record_dir),
                       "requested": tool["path"], "version_argv": tool["version_argv"], "flags": tool["flags"]})
-    return {"files": files, "tools": tools,
+    producer = file_identity(Path(__file__).resolve(), record_dir)
+    producer.pop("path", None)  # Identical installed copies are the same tool.
+    producer["id"] = "record_run.py"
+    return {"files": files, "tools": tools, "recording_tool": producer,
             "invoked_executable": file_identity(executable_path(manifest["command"]["argv"][0], cwd), record_dir),
             "environment": environment_identity(manifest["environment"])}
 
 
 def identity_errors(identity: dict) -> list[str]:
-    files = identity["files"] + [tool["file"] for tool in identity["tools"]] + [identity["invoked_executable"]]
-    return [f"Missing or unstable identity: {item['path']}" for item in files if not item.get("exists")]
+    files = identity["files"] + [tool["file"] for tool in identity["tools"]] + [identity["invoked_executable"], identity["recording_tool"]]
+    return [f"Missing or unstable identity: {item.get('path', item.get('id'))}" for item in files if not item.get("exists")]
 
 
 def utc_now() -> str:

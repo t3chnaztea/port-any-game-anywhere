@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "id": "switchboard-fixture-producer-pinned",
+  "claim_ids": [
+    "practice.board-1",
+    "practice.board-2",
+    "practice.board-3",
+    "practice.board-4",
+    "practice.board-5",
+    "practice.board-6",
+    "campaign.finish",
+    "doors.reverse",
+    "save.cold-undo",
+    "save.invalid",
+    "save.failed",
+    "undo.capacity",
+    "input.invalid"
+  ],
+  "profile": "original",
+  "target": "host-comparison",
+  "evidence_class": "fixture-test",
+  "command": {
+    "argv": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_switchboard.py",
+      "-v"
+    ],
+    "cwd": "../../..",
+    "timeout_seconds": 45,
+    "output_limit_bytes": 1048576
+  },
+  "inputs": [
+    {
+      "role": "source",
+      "path": "../reference/switchboard.c"
+    },
+    {
+      "role": "source",
+      "path": "../web/engine.ts"
+    },
+    {
+      "role": "source",
+      "path": "../web/cli.ts"
+    },
+    {
+      "role": "reference",
+      "path": "../CONTRACT.md"
+    },
+    {
+      "role": "fixture",
+      "path": "../../../tests/test_switchboard.py"
+    },
+    {
+      "role": "fixture",
+      "path": "../routes.json"
+    }
+  ],
+  "tools": [
+    {
+      "path": "python3",
+      "version_argv": [
+        "python3",
+        "--version"
+      ],
+      "flags": []
+    },
+    {
+      "path": "clang",
+      "version_argv": [
+        "clang",
+        "--version"
+      ],
+      "flags": [
+        "-std=c11",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Werror"
+      ]
+    },
+    {
+      "path": "node",
+      "version_argv": [
+        "node",
+        "--version"
+      ],
+      "flags": []
+    }
+  ],
+  "environment": [
+    "LANG",
+    "LC_ALL",
+    "NODE_OPTIONS",
+    "PYTHONPATH",
+    "PATH"
+  ],
+  "artifacts": []
+}

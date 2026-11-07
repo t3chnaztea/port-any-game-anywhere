@@ -66,6 +66,22 @@ class CheckPortTests(HelperFixture, unittest.TestCase):
                 path.write_bytes(old)
                 self.assertTrue(self.evaluate()["complete"])
 
+    def test_changed_recording_tool_invalidates(self):
+        collect = check_port.collect_identity
+        def changed(*args):
+            value = collect(*args)
+            value["recording_tool"]["sha256"] = "0" * 64
+            return value
+        with mock.patch.object(check_port, "collect_identity", side_effect=changed):
+            self.assert_incomplete()
+        self.assertTrue(self.evaluate()["complete"])
+
+    def test_legacy_pass_without_recording_tool_identity_is_not_current(self):
+        for snapshot in ("identity_before", "identity_after"):
+            del self.record[snapshot]["recording_tool"]
+        self.write_record()
+        self.assert_incomplete()
+
     def test_missing_input_log_or_artifact_each_invalidates(self):
         for name in ("reference.txt", "evidence.json.log", "artifact.txt"):
             path = self.base / name
