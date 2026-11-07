@@ -1,0 +1,911 @@
+{
+  "schema_version": 1,
+  "profiles": [
+    "original"
+  ],
+  "targets": [
+    "macos-chrome",
+    "iphone-safari"
+  ],
+  "unknowns": [
+    "Revision 1 is source/manual-derived; runtime may reveal more required paths.",
+    "Browser compilation blocked by missing emcc/emcmake.",
+    "Runnable same-snapshot reference not established.",
+    "Audio applicability and performance tolerances remain unresolved."
+  ],
+  "claims": [
+    {
+      "id": "fifteen.boot.macos-chrome",
+      "path": "Load the exact build; board, status, menus and normal inputs become usable",
+      "profile": "original",
+      "target": "macos-chrome",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "automated-gameplay",
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.pointer-adjacent.macos-chrome",
+      "path": "Move one adjacent tile by normal pointer/tap; compare board and count",
+      "profile": "original",
+      "target": "macos-chrome",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "automated-gameplay",
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.pointer-line.macos-chrome",
+      "path": "Move an aligned line of tiles; compare per-tile move count",
+      "profile": "original",
+      "target": "macos-chrome",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "automated-gameplay",
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.invalid-move.macos-chrome",
+      "path": "Gap, off-line and outside clicks leave state unchanged as the reference requires",
+      "profile": "original",
+      "target": "macos-chrome",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "automated-gameplay",
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.completion.macos-chrome",
+      "path": "Finish a one-move board; compare completion, move count and Undo",
+      "profile": "original",
+      "target": "macos-chrome",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "automated-gameplay",
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.new.macos-chrome",
+      "path": "New creates a valid board with the selected parameters",
+      "profile": "original",
+      "target": "macos-chrome",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "automated-gameplay",
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.restart.macos-chrome",
+      "path": "Restart returns to initial state; Undo restores pre-restart state",
+      "profile": "original",
+      "target": "macos-chrome",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "automated-gameplay",
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.undo-redo.macos-chrome",
+      "path": "Undo and Redo traverse the complete move chain and correct endpoint states",
+      "profile": "original",
+      "target": "macos-chrome",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "automated-gameplay",
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.branch-after-undo.macos-chrome",
+      "path": "A new move after Undo replaces the old redo branch",
+      "profile": "original",
+      "target": "macos-chrome",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "automated-gameplay",
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.save-full-history.macos-chrome",
+      "path": "Export with pending redo; restart/import; preserve complete undo/redo history",
+      "profile": "original",
+      "target": "macos-chrome",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "automated-gameplay",
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.invalid-save.macos-chrome",
+      "path": "Reject malformed, truncated and wrong-game saves without losing valid state where required",
+      "profile": "original",
+      "target": "macos-chrome",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "automated-gameplay",
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.preset.macos-chrome",
+      "path": "The 4x4 preset starts the expected board dimensions",
+      "profile": "original",
+      "target": "macos-chrome",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "automated-gameplay",
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.custom-valid.macos-chrome",
+      "path": "Custom 2x3 and 3x4 boards render and play correctly",
+      "profile": "original",
+      "target": "macos-chrome",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "automated-gameplay",
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.custom-invalid.macos-chrome",
+      "path": "Reject dimensions below two and an overflowing area with usable recovery",
+      "profile": "original",
+      "target": "macos-chrome",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "automated-gameplay",
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.seed-replay.macos-chrome",
+      "path": "Same snapshot and seed reproduce the identical board",
+      "profile": "original",
+      "target": "macos-chrome",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "automated-gameplay",
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.specific-id.macos-chrome",
+      "path": "Descriptive ID reproduces exact board and dimensions",
+      "profile": "original",
+      "target": "macos-chrome",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "automated-gameplay",
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.invalid-id.macos-chrome",
+      "path": "Reject malformed, duplicate and out-of-range tile descriptions",
+      "profile": "original",
+      "target": "macos-chrome",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "automated-gameplay",
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.hint.macos-chrome",
+      "path": "Hint follows reference move; repeated hints solve; report the route as assisted",
+      "profile": "original",
+      "target": "macos-chrome",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "automated-gameplay",
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.solve-undo.macos-chrome",
+      "path": "Solve marks the solved state; Undo restores the prior board and history",
+      "profile": "original",
+      "target": "macos-chrome",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "automated-gameplay",
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.preferences.macos-chrome",
+      "path": "Arrow-sense and shortcut preferences; reload and denied storage behavior match reference",
+      "profile": "original",
+      "target": "macos-chrome",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "automated-gameplay",
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.menus.macos-chrome",
+      "path": "Game/Type/Preferences/IDs/Save/Load/Help/About actions; cancellation preserves state",
+      "profile": "original",
+      "target": "macos-chrome",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "automated-gameplay",
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.presentation.macos-chrome",
+      "path": "Compare labels, layout, colors, status, animation, resizing and pixel ratio",
+      "profile": "original",
+      "target": "macos-chrome",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "automated-gameplay",
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.interruption.macos-chrome",
+      "path": "Focus loss, background/resume and reload behavior match declared reference contract",
+      "profile": "original",
+      "target": "macos-chrome",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "automated-gameplay",
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.performance.macos-chrome",
+      "path": "Meet measured reference-derived frame/load/long-session criteria on this device",
+      "profile": "original",
+      "target": "macos-chrome",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "automated-gameplay",
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.boot.iphone-safari",
+      "path": "Load the exact build; board, status, menus and normal inputs become usable",
+      "profile": "original",
+      "target": "iphone-safari",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.pointer-adjacent.iphone-safari",
+      "path": "Move one adjacent tile by normal pointer/tap; compare board and count",
+      "profile": "original",
+      "target": "iphone-safari",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.pointer-line.iphone-safari",
+      "path": "Move an aligned line of tiles; compare per-tile move count",
+      "profile": "original",
+      "target": "iphone-safari",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.invalid-move.iphone-safari",
+      "path": "Gap, off-line and outside clicks leave state unchanged as the reference requires",
+      "profile": "original",
+      "target": "iphone-safari",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.completion.iphone-safari",
+      "path": "Finish a one-move board; compare completion, move count and Undo",
+      "profile": "original",
+      "target": "iphone-safari",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.new.iphone-safari",
+      "path": "New creates a valid board with the selected parameters",
+      "profile": "original",
+      "target": "iphone-safari",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.restart.iphone-safari",
+      "path": "Restart returns to initial state; Undo restores pre-restart state",
+      "profile": "original",
+      "target": "iphone-safari",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.undo-redo.iphone-safari",
+      "path": "Undo and Redo traverse the complete move chain and correct endpoint states",
+      "profile": "original",
+      "target": "iphone-safari",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.branch-after-undo.iphone-safari",
+      "path": "A new move after Undo replaces the old redo branch",
+      "profile": "original",
+      "target": "iphone-safari",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.save-full-history.iphone-safari",
+      "path": "Export with pending redo; restart/import; preserve complete undo/redo history",
+      "profile": "original",
+      "target": "iphone-safari",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.invalid-save.iphone-safari",
+      "path": "Reject malformed, truncated and wrong-game saves without losing valid state where required",
+      "profile": "original",
+      "target": "iphone-safari",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.preset.iphone-safari",
+      "path": "The 4x4 preset starts the expected board dimensions",
+      "profile": "original",
+      "target": "iphone-safari",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.custom-valid.iphone-safari",
+      "path": "Custom 2x3 and 3x4 boards render and play correctly",
+      "profile": "original",
+      "target": "iphone-safari",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.custom-invalid.iphone-safari",
+      "path": "Reject dimensions below two and an overflowing area with usable recovery",
+      "profile": "original",
+      "target": "iphone-safari",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.seed-replay.iphone-safari",
+      "path": "Same snapshot and seed reproduce the identical board",
+      "profile": "original",
+      "target": "iphone-safari",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.specific-id.iphone-safari",
+      "path": "Descriptive ID reproduces exact board and dimensions",
+      "profile": "original",
+      "target": "iphone-safari",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.invalid-id.iphone-safari",
+      "path": "Reject malformed, duplicate and out-of-range tile descriptions",
+      "profile": "original",
+      "target": "iphone-safari",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.hint.iphone-safari",
+      "path": "Hint follows reference move; repeated hints solve; report the route as assisted",
+      "profile": "original",
+      "target": "iphone-safari",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.solve-undo.iphone-safari",
+      "path": "Solve marks the solved state; Undo restores the prior board and history",
+      "profile": "original",
+      "target": "iphone-safari",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.preferences.iphone-safari",
+      "path": "Arrow-sense and shortcut preferences; reload and denied storage behavior match reference",
+      "profile": "original",
+      "target": "iphone-safari",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.menus.iphone-safari",
+      "path": "Game/Type/Preferences/IDs/Save/Load/Help/About actions; cancellation preserves state",
+      "profile": "original",
+      "target": "iphone-safari",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.presentation.iphone-safari",
+      "path": "Compare labels, layout, colors, status, animation, resizing and pixel ratio",
+      "profile": "original",
+      "target": "iphone-safari",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.interruption.iphone-safari",
+      "path": "Focus loss, background/resume and reload behavior match declared reference contract",
+      "profile": "original",
+      "target": "iphone-safari",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.performance.iphone-safari",
+      "path": "Meet measured reference-derived frame/load/long-session criteria on this device",
+      "profile": "original",
+      "target": "iphone-safari",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Browser build and same-snapshot runtime comparison have not been performed."
+      ]
+    },
+    {
+      "id": "fifteen.keyboard-default.macos-chrome",
+      "path": "Default arrows move tiles, not the gap; boundary presses preserve state",
+      "profile": "original",
+      "target": "macos-chrome",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "automated-gameplay",
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Physical keyboard behavior has not been tested."
+      ]
+    },
+    {
+      "id": "fifteen.keyboard-inverted.macos-chrome",
+      "path": "Move-the-gap preference reverses arrow interpretation without changing game rules",
+      "profile": "original",
+      "target": "macos-chrome",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "automated-gameplay",
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "Physical keyboard behavior has not been tested."
+      ]
+    },
+    {
+      "id": "fifteen.touch.iphone-safari",
+      "path": "Actual iPhone tap performs intended move without unwanted scroll or focus failure",
+      "profile": "original",
+      "target": "iphone-safari",
+      "required": true,
+      "implementation": "pending",
+      "verification": "untested",
+      "required_evidence": [
+        "target-device",
+        "review"
+      ],
+      "evidence": [],
+      "unknowns": [
+        "No actual iPhone test has been performed."
+      ]
+    }
+  ]
+}

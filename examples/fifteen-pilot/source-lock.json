@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "project": "Simon Tatham's Portable Puzzle Collection: Fifteen",
+  "snapshot": "20260923.616da16",
+  "url": "https://www.chiark.greenend.org.uk/~sgtatham/puzzles/puzzles-20260923.616da16.tar.gz",
+  "archive": "puzzles-20260923.616da16.tar.gz",
+  "archive_root": "puzzles-20260923.616da16",
+  "sha256": "cc419c8060b4e22be398aa03e30651fbce146eee510645c303fb6f5f1b77b78e",
+  "size": 2497958,
+  "reviewed_on": "2026-11-07",
+  "publisher_last_modified": "2026-09-23T05:00:02Z",
+  "hash_provenance": "Computed from the named HTTPS source archive on 2026-11-07. No independent publisher checksum was located in the reviewed pages.",
+  "license_file": "LICENCE",
+  "license": "MIT"
+}

@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "status": "source-derived expectations; not executed",
+  "reference_snapshot": "20260923.616da16",
+  "coordinate_system": "zero-based row-major board; 0 denotes the gap",
+  "routes": [
+    {
+      "id": "one-move-default",
+      "game_id": "4x4:1,2,3,4,5,6,7,8,9,10,11,12,13,14,0,15",
+      "preference": "Move the tile",
+      "inputs": [
+        "ArrowLeft"
+      ],
+      "expected_board": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        0
+      ],
+      "expected_move_count": 1,
+      "expected_completed": true
+    },
+    {
+      "id": "one-move-inverted",
+      "game_id": "4x4:1,2,3,4,5,6,7,8,9,10,11,12,13,14,0,15",
+      "preference": "Move the gap",
+      "inputs": [
+        "ArrowRight"
+      ],
+      "expected_board": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        0
+      ],
+      "expected_move_count": 1,
+      "expected_completed": true
+    },
+    {
+      "id": "aligned-pointer",
+      "game_id": "4x4:1,2,3,4,5,6,7,8,9,10,11,12,13,0,14,15",
+      "preference": "Move the tile",
+      "inputs": [
+        "Click or tap tile 15 in column 3, row 3"
+      ],
+      "expected_board": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        0
+      ],
+      "expected_move_count": 2,
+      "expected_completed": true
+    },
+    {
+      "id": "save-pending-redo",
+      "game_id": "4x4:1,2,3,4,5,6,7,8,9,10,11,12,13,14,0,15",
+      "preference": "Move the tile",
+      "inputs": [
+        "ArrowRight",
+        "ArrowDown",
+        "ArrowLeft",
+        "Undo",
+        "Export save",
+        "Close game",
+        "Reopen same artifact",
+        "Import save"
+      ],
+      "expected_board": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        0,
+        11,
+        12,
+        13,
+        10,
+        14,
+        15
+      ],
+      "expected_move_count": 2,
+      "expected_completed": false,
+      "then": [
+        "Redo returns move count 3 and board 1,2,3,4,5,6,7,8,9,11,0,12,13,10,14,15",
+        "Undo three times returns the exact initial board and move count 0"
+      ]
+    }
+  ]
+}
