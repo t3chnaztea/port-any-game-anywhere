@@ -1,0 +1,17 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+node_modules/
+.work/
+dist/
+private/
+*.iso
+*.cue
+*.rom
+*.wav
+*.mp3
+*.mp4
+.env
+.env.*
+!.env.example
