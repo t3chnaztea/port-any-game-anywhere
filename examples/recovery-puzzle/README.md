@@ -57,6 +57,8 @@ The recorder refuses to overwrite an existing result. Move a new result into the
 
 ## Prepare a future recovery trial
 
-Build the reference on Linux x86-64 with Clang. Strip symbols in a copy. Give a new recovery agent only that executable, the public game instructions, and permitted tools in an isolated workspace. Withhold this repository's reference and TypeScript source, hidden checks, and evaluator notes. Disable source lookup in both trial and baseline. Freeze results before source disclosure.
+This repository publishes Switchboard's source and regression checks. Hiding those files in a new workspace cannot establish that an agent has never seen them. Do not use the current public fixture to claim blind recovery.
+
+Prepare a fresh unpublished variant or a new original game through an independent evaluator. Build its reference on Linux x86-64 with Clang and strip symbols in a copy. Give an unexposed recovery agent only the executable, game instructions and permitted tools. Keep source, hidden checks and evaluator notes outside an enforced read boundary. Disable source lookup in both trial and baseline. Freeze results before disclosing that new fixture.
 
 The Linux/Ghidra adapter, recovered-C build, matched agent trials, independent final audit, actual iPhone/Safari, and audible results remain required. This source-authored demonstration does not close them.

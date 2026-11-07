@@ -27,7 +27,8 @@ Source-authored code is not recovered code.
 
 Open: Ghidra/Linux recovery, actual iPhone/Safari, audible review, device checklists,
 isolated paired trials, five fresh testers and independent release/license review.
-No Sonic CD files were edited. No GitHub remote or release tag was created.
+No Sonic CD files were edited. Source publication does not close beta gates.
+No release tag is created by the development-source push.
 
 Next check: `python3 tools/check_repository.py`.
 For a repeated cleanup failure, retain the new assertion's exact result/log before

@@ -10,7 +10,7 @@ The Sonic CD Saturn case study summarizes internal source and documentation revi
 
 The Fifteen pilot pins `20260923.616da16` from [Simon Tatham’s Portable Puzzle Collection](https://www.chiark.greenend.org.uk/~sgtatham/puzzles/). Its existing web port is disclosed. The exact [MIT notice](examples/fifteen-pilot/UPSTREAM-LICENCE) is preserved. Source archives and built outputs stay outside the skill package. Do not extend a source-code license statement to unrelated assets or platform dependencies.
 
-Switchboard is the project’s original controlled recovery fixture. Its example-specific notices identify which files are original code and which assets are CC0. The original source remains evaluator-held during a blinded trial. That temporary access restriction is an evaluation control, not a permanent proprietary dependency.
+Switchboard is the project's original public regression fixture. Its example-specific notices identify original code and CC0 assets. Future blind trials must use fresh unpublished material with evaluator-held source, enforced access limits and no prior agent exposure. Temporary source withholding is an evaluation control, not a permanent proprietary dependency.
 
 ## Optional tools
 

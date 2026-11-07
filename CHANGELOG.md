@@ -1,5 +1,9 @@
 # Changelog
 
+## Development source publication, 2026-11-07
+
+The user authorized pushing the development repository to GitHub. This is source publication, not an accepted beta or tagged release. Current Switchboard and evaluation cases are public regression material. A future blind claim requires fresh unpublished fixtures, evaluator-held source, enforced access limits and no prior exposure.
+
 ## Local implementation, 2026-11-07
 
 Implemented the agent-neutral skill, optional Codex metadata, evidence helpers, negative tests, eight evaluation cases, isolated expectations, research, announcement history, contribution guidance and deterministic development packaging.

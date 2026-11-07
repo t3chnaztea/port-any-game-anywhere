@@ -8,7 +8,7 @@ This document is a plan. No release, announcement, outreach, or publication is a
 
 Release v0.1 as a public beta only after the required gates in [STATUS.md](../STATUS.md) close. Those include clean installation, live Codex evaluation, failure and interruption cases, stale-input rejection, independent final-claims review, and actual target-device checks for the worked examples.
 
-The primary demonstration is Switchboard’s complete route from stripped binary through recovered buildable C to a browser port. The external Fifteen reproduction checks the source-led workflow. Keep its existing upstream browser port visible in the description.
+The planned recovery demonstration requires a fresh unpublished fixture derived from the Switchboard design or another original game. The public Switchboard code is regression material and cannot establish no prior source exposure. The external Fifteen reproduction checks the source-led workflow. Keep its existing upstream browser port visible in the description.
 
 If a required pilot cannot run because its tools or device are unavailable, retain development-snapshot status. Do not replace the missing run with expected output, a mocked pass, or a promotional video.
 
@@ -21,7 +21,7 @@ Publish the exact evaluation revision and environment. Show the denominator behi
 ## Demonstrations
 
 1. **A missing path becomes visible.** Start from a working scene whose save recovery or alternate mode is broken. Show the inventory entry, reproduction, fix, independent check, and current evidence link.
-2. **A binary becomes a verified port.** Use Switchboard’s original redistributable fixture. Show the hidden-source boundary, recovered C build, browser controls, persistence, and final path comparison. Disclose what the fixture does not model.
+2. **A binary becomes a verified port.** Use a fresh unpublished fixture with evaluator-held source and an unexposed agent. Show the enforced source boundary, recovered C build, browser controls, persistence and final path comparison. Freeze results before source disclosure. State the limits. The current public Switchboard fixture supports reproducible regression demonstrations only.
 3. **An interruption does not become a pass.** Stop a run, change a relevant input, then show why the old result cannot close the new gate. Resume only unchanged work with intact evidence.
 4. **An impressive number gets a precise meaning.** Show a test count beside the finite required-path inventory. Explain what remains partial or untested. Do not present command counts as game completeness.
 

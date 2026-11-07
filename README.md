@@ -71,7 +71,7 @@ Read the diagram from left to right. Failures return to diagnosis and a bounded 
 
 Two redistributable examples support evaluation:
 
-- **Switchboard:** an original six-board puzzle with source-authored C and TypeScript implementations. Its future blinded trial must withhold source while an agent recovers buildable C. The current implementation does not count as recovery.
+- **Switchboard:** an original six-board puzzle with public, source-authored C and TypeScript implementations. It is reproducible regression material, not a blind recovery result. A future blind trial must use a fresh unpublished fixture with evaluator-held source and no prior agent exposure.
 - **Fifteen:** reproduce an existing source-led browser port from Simon Tatham’s puzzle collection. The existing upstream web port is disclosed. This checks onboarding, inventory, builds, and evidence. It is not a claim to have invented a new port.
 
 Switchboard has ten cross-language fixture tests and six browser checks. Fifteen has a pinned build and three browser route checks. These results have explicit limits. Expected outputs remain specifications until their own run supplies evidence. See [the example directory](examples/), [evaluation material](evaluations/), and [validation commands](docs/validation.md).
