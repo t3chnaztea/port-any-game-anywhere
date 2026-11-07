@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "record_type": "manual",
+  "id": "save-device-001",
+  "claim_ids": ["save.restart-continue.original"],
+  "profile": "original",
+  "target": "browser",
+  "evidence_class": "target-device",
+  "status": "blocked",
+  "operator": "REPLACE_WITH_ACTUAL_OPERATOR",
+  "device": {
+    "kind": "physical",
+    "model": "REPLACE_WITH_EXACT_DEVICE_MODEL",
+    "identifier": "REPLACE_WITH_LOCAL_DEVICE_IDENTIFIER",
+    "configuration": "REPLACE_WITH_OS_BROWSER_CONTROLS_AND_RELEVANT_SETTINGS"
+  },
+  "observed_at": "REPLACE_WITH_ACTUAL_ISO_8601_TIME_WITH_TIMEZONE",
+  "procedure": "Change the declared campaign state, save, terminate the game process, restart, reload, and compare the retained state with the pinned reference.",
+  "observations": [
+    "Template only. No device observation has been recorded. Replace this with actual observations."
+  ],
+  "inputs": [
+    {
+      "role": "reference",
+      "path": "reference/save-contract.txt",
+      "sha256": "REPLACE_WITH_64_LOWERCASE_HEX_DIGITS",
+      "size": 0
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "dist/game-build.zip",
+      "sha256": "REPLACE_WITH_64_LOWERCASE_HEX_DIGITS",
+      "size": 0
+    }
+  ]
+}

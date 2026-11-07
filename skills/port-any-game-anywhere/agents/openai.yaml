@@ -1,0 +1,6 @@
+interface:
+  display_name: "Port Any Game Anywhere"
+  short_description: "Finish faithful game ports with recorded evidence"
+  default_prompt: "Use $port-any-game-anywhere to assess this port, define its completion gates, and verify the next milestone."
+policy:
+  allow_implicit_invocation: false

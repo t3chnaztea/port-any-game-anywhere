@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "save-restart-continue-001",
+  "claim_ids": ["save.restart-continue.original"],
+  "profile": "original",
+  "target": "browser",
+  "evidence_class": "fixture-test",
+  "command": {
+    "argv": ["python3", "tests/save_restart_continue.py"],
+    "cwd": ".",
+    "timeout_seconds": 30,
+    "output_limit_bytes": 1048576
+  },
+  "inputs": [
+    {"role": "source", "path": "src/save.py"},
+    {"role": "reference", "path": "reference/save-contract.txt"},
+    {"role": "fixture", "path": "tests/save_restart_continue.py"},
+    {"role": "config", "path": "test-config.json"}
+  ],
+  "tools": [
+    {"path": "python3", "version_argv": ["python3", "--version"], "flags": []}
+  ],
+  "environment": ["LANG", "TZ"],
+  "artifacts": ["results/save-restart-continue.json"]
+}
