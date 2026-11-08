@@ -15,11 +15,11 @@
 
 </div>
 
+A set of instructions your coding agent follows, for people who love retro games and want to build ports, even if software engineering isn't their day job. It helps you plan the work, guide the agent, and check what it builds, with the goal of a port that plays and feels faithful to the original.
+
 We're living in a golden age of retro gaming. New tools and AI coding agents make projects that once felt out of reach possible. For me, that project was a childhood wish: **Sonic CD on Sega Saturn.**
 
-I started building the port. Getting it to run was exciting. Making it behave like the game I remembered meant checking the physics, saves, sound, controls, and paths through the game. Those details became a process I could repeat.
-
-**Port Any Game Anywhere** grew out of that work. It's a skill, a set of instructions your coding agent follows, for people who love retro games and want to build ports, even if software engineering isn't their day job. It helps you plan the work, guide the agent, and check what it builds, with the goal of a port that plays and feels faithful to the original.
+I started building the port. Getting it to run was exciting. Making it behave like the game I remembered meant checking the physics, saves, sound, controls, and paths through the game. Those details became a process I could repeat. **Port Any Game Anywhere** grew out of that work.
 
 **Development preview.** Codex has been checked with a small planning task. Other clients, blind recovery, paired agent comparisons, and physical-device acceptance remain unverified. [Status and known issues →](STATUS.md)
 
