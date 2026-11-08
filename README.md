@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="docs/assets/hero.svg" alt="Original illustration: reference code, a game controller, and an evidence report connected across a dark grid." width="100%">
-
 <h1>Port Any Game Anywhere</h1>
 
 <p>a skill for efficient &amp; faithful agentic retro game development.</p>
