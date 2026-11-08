@@ -4,8 +4,6 @@
 
 <h1>Port Any Game Anywhere</h1>
 
-<p><strong>Finish the port. Prove the game works.</strong></p>
-
 <p>a skill for efficient &amp; faithful agentic retro game development.</p>
 
 <p>
@@ -19,9 +17,13 @@
 
 </div>
 
-A port can boot while its saves, other modes, transitions, or final levels still fail. This skill helps agents find those gaps, finish small milestones, and retain the evidence behind each result.
+We're living in a golden age of retro gaming. New tools and AI coding agents make projects that once felt out of reach possible. For me, that project was a childhood wish: **Sonic CD on Sega Saturn.**
 
-**Development build.** The package has a Codex intake smoke check, original worked examples, and repository tests. Recovery trials, paired agent evaluations, and physical-device acceptance remain open. [Read the current state.](STATUS.md)
+I started building the port. Getting it to run was exciting. Making it behave like the game I remembered meant checking the physics, saves, sound, controls, and paths through the game. Those details became a process I could repeat.
+
+**Port Any Game Anywhere** grew out of that work. It's a skill, a set of instructions your coding agent follows, for people who love retro games and want to build ports, even if software engineering isn't their day job. It helps you plan the work, guide the agent, and check what it builds, with the goal of a port that plays and feels faithful to the original.
+
+**Development preview.** Codex has been checked with a small planning task. Other clients, blind recovery, paired agent comparisons, and physical-device acceptance remain unverified. [Status and known issues →](STATUS.md)
 
 ## Start here
 
@@ -52,6 +54,8 @@ The core follows the open Agent Skills format. Codex is the first checked client
 ## See the example
 
 Meet **Switchboard**, an original six-board puzzle with C and TypeScript implementations. Its checks exercise complete routes, failed saves, cold loads, and undo history.
+
+One review found that both versions accepted an invalid save that could advance past the final board and crash. Both now reject that save and preserve the player's existing state. The example records the reproduction, fix, and independent checks. That's the kind of gap a playable demo can hide.
 
 <a href="examples/recovery-puzzle/README.md"><img src="docs/assets/switchboard-preview.png" alt="Switchboard running in the browser: a numbered board with a player, switch, door and exit; movement, undo, save and load controls below." width="100%"></a>
 
@@ -85,7 +89,7 @@ A **completion ledger** lists required behaviors and their evidence. A **gate** 
 
 ## Built from real porting work
 
-The main process case is **Sonic CD Saturn / CD++**. It shows why implemented features, historical test results, current checks, and console acceptance must stay separate. Its complete-game acceptance remains open in the reviewed snapshot. No SEGA game data is distributed here.
+**Sonic CD Saturn / CD++** is where I developed this workflow. The case study shows how I track game paths, compare original behavior, test saves, and resume interrupted work. The full port remains in progress in the reviewed snapshot. Emulator checks and console acceptance are recorded separately. No SEGA game data is distributed here.
 
 [Read the Sonic CD case study →](docs/case-studies/sonic-cd.md) · [Research behind the method →](docs/research.md) · [How comparable projects launched →](docs/launch-history.md)
 
@@ -93,7 +97,7 @@ The main process case is **Sonic CD Saturn / CD++**. It shows why implemented fe
 
 The skill can assess different hardware, operating systems, engines, languages, and input systems. A port still needs usable source or recoverable behavior, rights, tools, resources, and access to the target. Some targets will be infeasible. No instruction file can automatically port every game.
 
-Current Switchboard source and public evaluation cases are regression material. Future blind trials require fresh unpublished fixtures, evaluator-held source, restricted access, and no prior exposure. [Compatibility and limits →](docs/compatibility.md)
+The public examples have source code available. They do not establish blind recovery of an unknown game. A recorder timeout issue also remains under investigation. [Compatibility and limits →](docs/compatibility.md) · [Verification report →](docs/verification-report.md)
 
 ## Project guide
 
